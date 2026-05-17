@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c8acwwgx2fqew"]
+
+[ext_resource type="Texture2D" uid="uid://coxll7exm8fhe" path="res://icon.svg" id="1_37kl0"]
+[ext_resource type="PackedScene" uid="uid://cojjwfmfc8e5q" path="res://Scenes/Enemies/Mushroom/mushroom.tscn" id="2_8uh7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uh7m"]
+size = Vector2(119, 120)
+
+[node name="Test" type="Node2D" unique_id=1051985133]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1337872276]
+scale = Vector2(12.679998, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1932691172]
+position = Vector2(-2.5, 2)
+shape = SubResource("RectangleShape2D_8uh7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=270543999]
+texture = ExtResource("1_37kl0")
+
+[node name="Mushroom" parent="." unique_id=1167331425 instance=ExtResource("2_8uh7m")]
+position = Vector2(-284, -267)
+
+[node name="Camera2D" type="Camera2D" parent="Mushroom" unique_id=1931394158]
+scale = Vector2(0.96, 1)
+zoom = Vector2(0.5, 0.5)

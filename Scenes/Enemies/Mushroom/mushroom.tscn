@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cojjwfmfc8e5q"]
+
+[ext_resource type="Texture2D" uid="uid://3618lytb7nnv" path="res://Asset/Enemies/mushroom/mushroom_01.png" id="1_hloew"]
+[ext_resource type="Texture2D" uid="uid://bqgmklofxv0qi" path="res://Asset/Enemies/mushroom/mushroom_02.png" id="2_j26pb"]
+[ext_resource type="Texture2D" uid="uid://cghgcxg1pvwd6" path="res://Asset/Enemies/mushroom/mushroom_03.png" id="3_305jp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1ms0"]
+size = Vector2(18, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_460ch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hloew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j26pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_305jp")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 5.0
+}]
+
+[node name="Mushroom" type="CharacterBody2D" unique_id=1167331425]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1737073358]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_o1ms0")
+
+[node name="Direction" type="Node2D" parent="." unique_id=608205650]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Direction" unique_id=1551433010]
+sprite_frames = SubResource("SpriteFrames_460ch")
+animation = &"Moving"
+frame_progress = 0.09089456
+
+[node name="State" type="Node" parent="." unique_id=2108290992]
