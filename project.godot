@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Foxy_dev"
+run/main_scene="uid://kyc0dmuwc3w0"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=480
-window/size/viewport_height=270
+window/size/viewport_width=1020
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
