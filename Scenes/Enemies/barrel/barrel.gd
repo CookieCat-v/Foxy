@@ -3,8 +3,12 @@ extends Area2D
 @onready var anim = $AnimatedSprite2D
 @onready var raycast = $FrontCast2D
 var bullet_scene = preload("res://Scenes/Enemies/barrel/barrel_bullet.tscn")
-var direction = 1
+@export var direction = 1
 func _ready() -> void:
+	if direction==-1:
+		raycast.rotation_degrees = 180
+		raycast.position*=-1
+		anim.flip_h = true
 	anim.play("idle")
 func _process(delta: float) -> void:
 	if anim.animation=="idle" and raycast.is_colliding():
@@ -21,6 +25,5 @@ func _fire()->void:
 
 
 func _on_attack_finished() -> void:
-	print_debug("test")
 	if (anim.animation=="attack"): 
 		anim.play("idle")

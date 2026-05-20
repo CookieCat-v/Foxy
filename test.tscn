@@ -8,7 +8,7 @@
 size = Vector2(119, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6uqi0"]
-size = Vector2(127.5, 128)
+size = Vector2(125.5, 128)
 
 [node name="Test" type="Node2D" unique_id=1051985133]
 
@@ -23,7 +23,7 @@ shape = SubResource("RectangleShape2D_8uh7m")
 texture = ExtResource("1_37kl0")
 
 [node name="Mushroom" parent="." unique_id=1167331425 instance=ExtResource("2_8uh7m")]
-position = Vector2(-390, -160)
+position = Vector2(-572, -274)
 collision_layer = 6
 speed = 5000
 
@@ -37,7 +37,7 @@ texture = ExtResource("1_37kl0")
 [node name="StaticBody2D" type="StaticBody2D" parent="Icon" unique_id=1121351929]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/StaticBody2D" unique_id=88589199]
-position = Vector2(27, 0)
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_6uqi0")
 
 [node name="Icon2" type="Sprite2D" parent="." unique_id=1219828904]
@@ -47,7 +47,7 @@ texture = ExtResource("1_37kl0")
 [node name="StaticBody2D" type="StaticBody2D" parent="Icon2" unique_id=979992892]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon2/StaticBody2D" unique_id=1530234959]
-position = Vector2(0.25, 2)
+position = Vector2(-0.75, 2)
 shape = SubResource("RectangleShape2D_6uqi0")
 
 [node name="Icon3" type="Sprite2D" parent="." unique_id=1551117887]
@@ -63,3 +63,4 @@ shape = SubResource("RectangleShape2D_6uqi0")
 
 [node name="Barrel" parent="." unique_id=491401042 instance=ExtResource("3_6uqi0")]
 position = Vector2(-500, -206)
+direction = -1
