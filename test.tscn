@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c8acwwgx2fqew"]
+
+[ext_resource type="Texture2D" uid="uid://coxll7exm8fhe" path="res://icon.svg" id="1_37kl0"]
+[ext_resource type="PackedScene" uid="uid://cojjwfmfc8e5q" path="res://Scenes/Enemies/Mushroom/mushroom.tscn" id="2_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://dfv5k401j1xjh" path="res://Scenes/Enemies/barrel/barrel.tscn" id="3_6uqi0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uh7m"]
+size = Vector2(119, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6uqi0"]
+size = Vector2(125.5, 128)
+
+[node name="Test" type="Node2D" unique_id=1051985133]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1337872276]
+scale = Vector2(12.679998, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1932691172]
+position = Vector2(-2.5, 2)
+shape = SubResource("RectangleShape2D_8uh7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=270543999]
+texture = ExtResource("1_37kl0")
+
+[node name="Mushroom" parent="." unique_id=1167331425 instance=ExtResource("2_8uh7m")]
+position = Vector2(-572, -274)
+collision_layer = 6
+speed = 5000
+
+[node name="Camera2D" type="Camera2D" parent="Mushroom" unique_id=1931394158]
+scale = Vector2(0.96, 1)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2008824149]
+position = Vector2(-515, -126)
+texture = ExtResource("1_37kl0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Icon" unique_id=1121351929]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/StaticBody2D" unique_id=88589199]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_6uqi0")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1219828904]
+position = Vector2(-268, -126)
+texture = ExtResource("1_37kl0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Icon2" unique_id=979992892]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon2/StaticBody2D" unique_id=1530234959]
+position = Vector2(-0.75, 2)
+shape = SubResource("RectangleShape2D_6uqi0")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1551117887]
+position = Vector2(-268, -254)
+texture = ExtResource("1_37kl0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Icon3" unique_id=1413173312]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon3/StaticBody2D" unique_id=1120735790]
+position = Vector2(0.25, 2)
+shape = SubResource("RectangleShape2D_6uqi0")
+
+[node name="Barrel" parent="." unique_id=491401042 instance=ExtResource("3_6uqi0")]
+position = Vector2(-500, -206)
+direction = -1

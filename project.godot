@@ -11,15 +11,24 @@ config_version=5
 [application]
 
 config/name="Foxy_dev"
-run/main_scene="uid://kyc0dmuwc3w0"
+run/main_scene="uid://c8acwwgx2fqew"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1020
+window/size/viewport_width=960
+window/size/viewport_height=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[layer_names]
+
+2d_physics/layer_1="environment"
+2d_physics/layer_2="player"
+2d_physics/layer_3="player_hurt"
+2d_physics/layer_4="enemy"
+2d_physics/layer_5="enemy_hurt"
 
 [physics]
 
