@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cojjwfmfc8e5q"]
+
+[ext_resource type="Texture2D" uid="uid://3618lytb7nnv" path="res://Asset/Enemies/mushroom/mushroom_01.png" id="1_hloew"]
+[ext_resource type="Script" uid="uid://dhwpxb8jlldcl" path="res://Scenes/Enemies/Mushroom/Mushroom.gd" id="1_rdydv"]
+[ext_resource type="Texture2D" uid="uid://bqgmklofxv0qi" path="res://Asset/Enemies/mushroom/mushroom_02.png" id="2_j26pb"]
+[ext_resource type="Texture2D" uid="uid://cghgcxg1pvwd6" path="res://Asset/Enemies/mushroom/mushroom_03.png" id="3_305jp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1ms0"]
+size = Vector2(18, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_460ch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hloew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j26pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_305jp")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rdydv"]
+size = Vector2(18, 20)
+
+[node name="Mushroom" type="CharacterBody2D" unique_id=1167331425]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_rdydv")
+speed = 10000
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1737073358]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_o1ms0")
+
+[node name="Direction" type="Node2D" parent="." unique_id=608205650]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Direction" unique_id=1551433010]
+sprite_frames = SubResource("SpriteFrames_460ch")
+animation = &"Moving"
+frame_progress = 0.09089456
+
+[node name="FrontRayCast2D" type="RayCast2D" parent="Direction" unique_id=1455468960]
+position = Vector2(9, 6)
+target_position = Vector2(14, 0)
+
+[node name="DownRayCast2D" type="RayCast2D" parent="Direction" unique_id=207502453]
+position = Vector2(18, 9)
+target_position = Vector2(0, 8)
+
+[node name="GroundCast2D" type="RayCast2D" parent="Direction" unique_id=423492844]
+position = Vector2(0, 9)
+target_position = Vector2(0, 8)
+
+[node name="Hitbox2D" type="Area2D" parent="." unique_id=143599249]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox2D" unique_id=372787253]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_rdydv")
