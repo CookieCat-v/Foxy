@@ -1,8 +1,10 @@
 [gd_resource type="TileSet" format=3 uid="uid://bd6acimo0npld"]
 
-[ext_resource type="Texture2D" uid="uid://v2dtejovry7r" path="res://Assets/Art/island/terrain/terrain_32x32.png" id="1_bqvb8"]
-[ext_resource type="PackedScene" uid="uid://cs4psatklehpl" path="res://Scene/Stage_1/IslandBackground/PalmTree.tscn" id="2_5p1n2"]
-[ext_resource type="PackedScene" uid="uid://cru3hf3q5p0w8" path="res://Scene/Stage_1/IslandBackground/Coin.tscn" id="3_8cwip"]
+[ext_resource type="Texture2D" uid="uid://v2dtejovry7r" path="res://Assets/island/terrain/terrain_32x32.png" id="1_bqvb8"]
+[ext_resource type="PackedScene" uid="uid://cru3hf3q5p0w8" path="res://Scenes/Background/IslandBackground/Coin.tscn" id="2_8cwip"]
+[ext_resource type="PackedScene" uid="uid://cs4psatklehpl" path="res://Scenes/Background/IslandBackground/PalmTree.tscn" id="3_80upi"]
+[ext_resource type="PackedScene" uid="uid://frg4kx7x7cby" path="res://Scenes/Background/IslandBackground/Boat.tscn" id="4_80upi"]
+[ext_resource type="PackedScene" uid="uid://bk8cq1q4xqs5l" path="res://Scenes/Background/IslandBackground/Flag.tscn" id="5_lye6b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pehbo"]
 texture = ExtResource("1_bqvb8")
@@ -235,12 +237,14 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_8cwip"]
-scenes/1/scene = ExtResource("2_5p1n2")
-scenes/2/scene = ExtResource("3_8cwip")
+scenes/1/scene = ExtResource("2_8cwip")
+scenes/2/scene = ExtResource("3_80upi")
+scenes/3/scene = ExtResource("4_80upi")
+scenes/4/scene = ExtResource("5_lye6b")
 
 [resource]
 tile_size = Vector2i(32, 32)
 uv_clipping = true
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_pehbo")
-sources/1 = SubResource("TileSetScenesCollectionSource_8cwip")
+sources/3 = SubResource("TileSetScenesCollectionSource_8cwip")
