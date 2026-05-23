@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dhwpxb8jlldcl" path="res://Scenes/Enemies/Mushroom/Mushroom.gd" id="1_rdydv"]
 [ext_resource type="Texture2D" uid="uid://bqgmklofxv0qi" path="res://Assets/monsters/mushroom/mushroom_02.png" id="2_j26pb"]
 [ext_resource type="Texture2D" uid="uid://cghgcxg1pvwd6" path="res://Assets/monsters/mushroom/mushroom_03.png" id="3_305jp"]
+[ext_resource type="Script" uid="uid://bj3stuiih12nn" path="res://scripts/hit_area_2d.gd" id="5_tu052"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1ms0"]
 size = Vector2(18, 22)
@@ -25,12 +26,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rdydv"]
-size = Vector2(18, 20)
-
 [node name="Mushroom" type="CharacterBody2D" unique_id=1167331425]
-collision_layer = 4
-collision_mask = 3
+collision_layer = 8
 script = ExtResource("1_rdydv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1737073358]
@@ -56,10 +53,12 @@ target_position = Vector2(0, 8)
 position = Vector2(0, 9)
 target_position = Vector2(0, 8)
 
-[node name="Hitbox2D" type="Area2D" parent="." unique_id=143599249]
+[node name="HitArea2D" type="Area2D" parent="." unique_id=684273816]
 collision_layer = 4
-collision_mask = 2
+collision_mask = 3
+script = ExtResource("5_tu052")
+metadata/_custom_type_script = "uid://bj3stuiih12nn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox2D" unique_id=372787253]
-position = Vector2(0, 5)
-shape = SubResource("RectangleShape2D_rdydv")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitArea2D" unique_id=416514354]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_o1ms0")
