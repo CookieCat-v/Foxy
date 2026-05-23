@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dfv5k401j1xjh"]
 
 [ext_resource type="Script" uid="uid://dehyp6p085jio" path="res://Scenes/Enemies/barrel/barrel.gd" id="1_lpcl7"]
-[ext_resource type="Texture2D" uid="uid://cqx6oo2y8sm72" path="res://Asset/Enemies/barrel/barrel_atk_01.png" id="1_u2jso"]
-[ext_resource type="Texture2D" uid="uid://13kywbwnrcpt" path="res://Asset/Enemies/barrel/barrel_atk_02.png" id="2_lpcl7"]
-[ext_resource type="Texture2D" uid="uid://br4mmx4xbq5mb" path="res://Asset/Enemies/barrel/barrel_atk_03.png" id="3_7flyq"]
-[ext_resource type="Texture2D" uid="uid://ch4lowrotola6" path="res://Asset/Enemies/barrel/barrel_atk_04.png" id="4_hwe78"]
-[ext_resource type="Texture2D" uid="uid://dwakc8bsk04fs" path="res://Asset/Enemies/barrel/barrel_atk_05.png" id="5_p4rqe"]
-[ext_resource type="Texture2D" uid="uid://b4ryafwmoaade" path="res://Asset/Enemies/barrel/barrel_01.png" id="6_rf82f"]
-[ext_resource type="Texture2D" uid="uid://bkrhulttmeuln" path="res://Asset/Enemies/barrel/barrel_02.png" id="7_0eyqb"]
+[ext_resource type="Texture2D" uid="uid://de0p6wfv2rc7g" path="res://Assets/monsters/barrel/barrel_atk_01.png" id="1_u2jso"]
+[ext_resource type="Texture2D" uid="uid://2igv4kkux8c6" path="res://Assets/monsters/barrel/barrel_atk_02.png" id="2_lpcl7"]
+[ext_resource type="Texture2D" uid="uid://lxyxy6hj6rja" path="res://Assets/monsters/barrel/barrel_atk_03.png" id="3_7flyq"]
+[ext_resource type="Texture2D" uid="uid://c2c1sjpl4vgrq" path="res://Assets/monsters/barrel/barrel_atk_04.png" id="4_hwe78"]
+[ext_resource type="Texture2D" uid="uid://b564c7jpiwbh0" path="res://Assets/monsters/barrel/barrel_atk_05.png" id="5_p4rqe"]
+[ext_resource type="Texture2D" uid="uid://dfnk2rp7cs1vg" path="res://Assets/monsters/barrel/barrel_01.png" id="6_rf82f"]
+[ext_resource type="Texture2D" uid="uid://bwg8hpav3cy74" path="res://Assets/monsters/barrel/barrel_02.png" id="7_0eyqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq6jo"]
 
@@ -65,6 +65,11 @@ frame_progress = 1.0
 
 [node name="FrontCast2D" type="RayCast2D" parent="." unique_id=1060672472]
 position = Vector2(8, 0)
+target_position = Vector2(200, 0)
+collision_mask = 2
+
+[node name="BackCast2D" type="RayCast2D" parent="." unique_id=1424527218]
+position = Vector2(-8, 0)
 target_position = Vector2(200, 0)
 collision_mask = 2
 

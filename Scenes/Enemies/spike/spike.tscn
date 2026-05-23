@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://trgc0h0dnqri"]
 
-[ext_resource type="Texture2D" uid="uid://15ijnadrur3x" path="res://Asset/Enemies/spikes/spikes.png" id="1_g5huh"]
+[ext_resource type="Texture2D" uid="uid://c8j8q6yfx07du" path="res://Assets/monsters/spikes/spikes.png" id="1_g5huh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kina6"]
 size = Vector2(27, 11)
