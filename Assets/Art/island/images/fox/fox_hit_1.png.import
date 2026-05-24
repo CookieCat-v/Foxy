@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1um1gtr3vxwa"
-path="res://.godot/imported/fox_hit_1.png-f47c72eb44f3ab513e0195c6776043fa.ctex"
+path="res://.godot/imported/fox_hit_1.png-115b0ac9db0332856aa9d15d8a81a847.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/island/images/fox/fox_hit_1.png"
-dest_files=["res://.godot/imported/fox_hit_1.png-f47c72eb44f3ab513e0195c6776043fa.ctex"]
+source_file="res://assets/Art/island/images/fox/fox_hit_1.png"
+dest_files=["res://.godot/imported/fox_hit_1.png-115b0ac9db0332856aa9d15d8a81a847.ctex"]
 
 [params]
 

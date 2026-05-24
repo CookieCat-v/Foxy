@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3ewkkxgxwo45"
-path="res://.godot/imported/pelican_04.png-4a42a029bae230b29af170dee5519df3.ctex"
+path="res://.godot/imported/pelican_04.png-d79aa5ba39c1dbfd2abc21f5d678dacd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/monsters/pelican/pelican_04.png"
-dest_files=["res://.godot/imported/pelican_04.png-4a42a029bae230b29af170dee5519df3.ctex"]
+source_file="res://assets/monsters/pelican/pelican_04.png"
+dest_files=["res://.godot/imported/pelican_04.png-d79aa5ba39c1dbfd2abc21f5d678dacd.ctex"]
 
 [params]
 

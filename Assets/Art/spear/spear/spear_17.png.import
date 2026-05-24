@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qgayyp8tjfyh"
-path="res://.godot/imported/spear_17.png-fca15cc87c6accad8177c177f2086add.ctex"
+path="res://.godot/imported/spear_17.png-14862698ec41ac460e2229c7d1dc16f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/spear/spear/spear_17.png"
-dest_files=["res://.godot/imported/spear_17.png-fca15cc87c6accad8177c177f2086add.ctex"]
+source_file="res://assets/Art/spear/spear/spear_17.png"
+dest_files=["res://.godot/imported/spear_17.png-14862698ec41ac460e2229c7d1dc16f7.ctex"]
 
 [params]
 

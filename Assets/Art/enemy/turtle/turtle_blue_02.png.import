@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvoxti6qro0r4"
-path="res://.godot/imported/turtle_blue_02.png-113e45baad42265511a8a04acb67cc9d.ctex"
+path="res://.godot/imported/turtle_blue_02.png-016f5107053b058c57e31fad264b1411.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/enemy/turtle/turtle_blue_02.png"
-dest_files=["res://.godot/imported/turtle_blue_02.png-113e45baad42265511a8a04acb67cc9d.ctex"]
+source_file="res://assets/Art/enemy/turtle/turtle_blue_02.png"
+dest_files=["res://.godot/imported/turtle_blue_02.png-016f5107053b058c57e31fad264b1411.ctex"]
 
 [params]
 

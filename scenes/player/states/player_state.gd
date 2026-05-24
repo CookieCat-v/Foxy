@@ -27,8 +27,14 @@ func control_jump() -> bool:
 		return true
 	return false
 
-func take_damage(damage) -> void:
+func take_damage(_damage) -> void:
 	#Player take damage
 	#Player die if health is 0 and change to dead state
 	#Player hurt if health is not 0 and change to hurt state
 	return
+
+func control_attack() -> bool:
+	if Input.is_action_just_pressed("attack") and obj.can_attack():
+		change_state(fsm.states.attack)
+		return true
+	return false

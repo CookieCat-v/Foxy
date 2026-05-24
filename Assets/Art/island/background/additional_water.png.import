@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck8762h1hy2cf"
-path="res://.godot/imported/additional_water.png-682a3d5e0047c390f27cd304075e22e1.ctex"
+path="res://.godot/imported/additional_water.png-c49e51dcc82c043038a226c916e39aa9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/island/background/additional_water.png"
-dest_files=["res://.godot/imported/additional_water.png-682a3d5e0047c390f27cd304075e22e1.ctex"]
+source_file="res://assets/Art/island/background/additional_water.png"
+dest_files=["res://.godot/imported/additional_water.png-c49e51dcc82c043038a226c916e39aa9.ctex"]
 
 [params]
 

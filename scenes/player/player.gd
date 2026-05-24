@@ -3,7 +3,7 @@ extends BaseCharacter
 
 ## Player character class that handles movement, combat, and state management
 var is_invulnerable: bool = false
-@export var has_blade: bool = false
+@export var has_blade: bool = true
 
 func _ready() -> void:
 	super._ready()

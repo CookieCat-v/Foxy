@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj26ktx7yp2s2"
-path="res://.godot/imported/boat_sail_4.png-729dbfcd4f090d36245f654d45a708ce.ctex"
+path="res://.godot/imported/boat_sail_4.png-c21df45518071a775d84f81e66c40f54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/foxy/foxy/boat/boat_sail_4.png"
-dest_files=["res://.godot/imported/boat_sail_4.png-729dbfcd4f090d36245f654d45a708ce.ctex"]
+source_file="res://assets/Art/foxy/foxy/boat/boat_sail_4.png"
+dest_files=["res://.godot/imported/boat_sail_4.png-c21df45518071a775d84f81e66c40f54.ctex"]
 
 [params]
 

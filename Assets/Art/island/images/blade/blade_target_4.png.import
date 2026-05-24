@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e1d0u5wwv225"
-path="res://.godot/imported/blade_target_4.png-f053b4862700c0c08b4bb39583528705.ctex"
+path="res://.godot/imported/blade_target_4.png-8ff214487daf2b030d6cf234d278ba2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/island/images/blade/blade_target_4.png"
-dest_files=["res://.godot/imported/blade_target_4.png-f053b4862700c0c08b4bb39583528705.ctex"]
+source_file="res://assets/Art/island/images/blade/blade_target_4.png"
+dest_files=["res://.godot/imported/blade_target_4.png-8ff214487daf2b030d6cf234d278ba2a.ctex"]
 
 [params]
 

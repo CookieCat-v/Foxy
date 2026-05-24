@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2c1sjpl4vgrq"
-path="res://.godot/imported/barrel_atk_04.png-27a7c3fd871a2dd3d1464fb0cbe772f1.ctex"
+path="res://.godot/imported/barrel_atk_04.png-7dc011b7df8438b5578be2e62ea89e53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/monsters/barrel/barrel_atk_04.png"
-dest_files=["res://.godot/imported/barrel_atk_04.png-27a7c3fd871a2dd3d1464fb0cbe772f1.ctex"]
+source_file="res://assets/monsters/barrel/barrel_atk_04.png"
+dest_files=["res://.godot/imported/barrel_atk_04.png-7dc011b7df8438b5578be2e62ea89e53.ctex"]
 
 [params]
 

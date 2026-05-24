@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn2ndyhoflgrx"
-path="res://.godot/imported/bullet_cannon.png-6ff3bdca29eed6f9e35bc257f47a3798.ctex"
+path="res://.godot/imported/bullet_cannon.png-ea4460e617a1ca167942304da9915cb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/war_lord_bullet/bullet_cannon.png"
-dest_files=["res://.godot/imported/bullet_cannon.png-6ff3bdca29eed6f9e35bc257f47a3798.ctex"]
+source_file="res://assets/Art/war_lord_bullet/bullet_cannon.png"
+dest_files=["res://.godot/imported/bullet_cannon.png-ea4460e617a1ca167942304da9915cb4.ctex"]
 
 [params]
 

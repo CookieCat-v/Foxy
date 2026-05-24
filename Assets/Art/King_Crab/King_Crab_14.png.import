@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1nttff2vt7b4"
-path="res://.godot/imported/King_Crab_14.png-f02f8d73c12f4c3dca74eec007227c69.ctex"
+path="res://.godot/imported/King_Crab_14.png-fdc3b337b6916e7fc0fa609f4b0dd896.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/King_Crab/King_Crab_14.png"
-dest_files=["res://.godot/imported/King_Crab_14.png-f02f8d73c12f4c3dca74eec007227c69.ctex"]
+source_file="res://assets/Art/King_Crab/King_Crab_14.png"
+dest_files=["res://.godot/imported/King_Crab_14.png-fdc3b337b6916e7fc0fa609f4b0dd896.ctex"]
 
 [params]
 
