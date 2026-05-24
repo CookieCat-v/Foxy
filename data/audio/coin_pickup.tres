@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AudioClip" format=3 uid="uid://d1cr50oohc8ve"]
+
+[ext_resource type="Script" uid="uid://bbckbjsernvwt" path="res://scripts/audio/audio_clip.gd" id="1_7f2xt"]
+[ext_resource type="AudioStream" uid="uid://bvqc8x3c0ce1p" path="res://Assets/Audio/sfx/collect/coin.mp3" id="2_rdud5"]
+
+[resource]
+script = ExtResource("1_7f2xt")
+clip_id = "coin_pickup"
+stream = ExtResource("2_rdud5")
+randomize_pitch = true
+metadata/_custom_type_script = "uid://bbckbjsernvwt"

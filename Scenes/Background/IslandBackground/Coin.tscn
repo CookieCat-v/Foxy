@@ -17,7 +17,7 @@ func _on_body_entered(body: Node2D) -> void:
 		var currentScore = int(label.text)
 		currentScore += 100
 		label.text = str(currentScore)
-		
+		AudioManager.play_sound(\"coin_pickup\")
 		queue_free()
 "
 

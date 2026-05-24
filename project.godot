@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="Foxy_dev"
-run/main_scene="uid://bis4n5r8jsyf4"
+run/main_scene="uid://c8acwwgx2fqew"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://crddm4m1tp8fi"
+
+[autoload]
+
+AudioManager="*uid://c6w0dfb6lenr6"
 
 [display]
 

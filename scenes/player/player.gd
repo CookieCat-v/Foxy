@@ -19,4 +19,5 @@ func collected_blade() -> void:
 	set_animated_sprite($Direction/BladeAnimatedSprite2D)
 			
 func _on_hurt_area_2d_hurt(_direction: Variant, _damage: Variant) -> void:
+	print_debug("hit")
 	fsm.current_state.take_damage(_damage)

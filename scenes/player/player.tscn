@@ -15,10 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://3g5hdrfwcd2c" path="res://Assets/foxy/fox_hat/fox_run_2.png" id="15_b8hi5"]
 [ext_resource type="Texture2D" uid="uid://cg0s41812vukj" path="res://Assets/foxy/fox_hat/fox_run_3.png" id="16_2uvqg"]
 [ext_resource type="Texture2D" uid="uid://8u26ji11yaua" path="res://Assets/foxy/fox_hat/fox_run_4.png" id="17_1s1yo"]
-[ext_resource type="Script" uid="uid://1otd00l7ophm" path="res://Scenes/Player/states/idle.gd" id="39_art4l"]
-[ext_resource type="Script" uid="uid://y2v086gccrit" path="res://Scenes/Player/states/run.gd" id="40_fjxoa"]
-[ext_resource type="Script" uid="uid://dbvlrdmxv7qq" path="res://Scenes/Player/states/jump.gd" id="41_gswnw"]
-[ext_resource type="Script" uid="uid://cphw50n3a58ja" path="res://Scenes/Player/states/fall.gd" id="42_xcnuv"]
+[ext_resource type="Script" uid="uid://1otd00l7ophm" path="res://Scenes/player/states/idle.gd" id="39_art4l"]
+[ext_resource type="Script" uid="uid://y2v086gccrit" path="res://Scenes/player/states/run.gd" id="40_fjxoa"]
+[ext_resource type="Script" uid="uid://dbvlrdmxv7qq" path="res://Scenes/player/states/jump.gd" id="41_gswnw"]
+[ext_resource type="Script" uid="uid://cphw50n3a58ja" path="res://Scenes/player/states/fall.gd" id="42_xcnuv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oul6g"]
 radius = 9.0
