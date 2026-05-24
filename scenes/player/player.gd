@@ -5,11 +5,28 @@ extends BaseCharacter
 var is_invulnerable: bool = false
 @export var has_blade: bool = false
 
+var hud_scene = preload("res://Scenes/ui/hud.tscn")
+var hud_instance = null
+
+var pause_menu_scene = preload("res://Scenes/ui/pause_menu.tscn")
+var pause_menu_instance = null
+
 func _ready() -> void:
 	super._ready()
 	fsm = FSM.new(self, $States, $States/Idle)
 	if has_blade:
 		collected_blade()
+		
+	hud_instance = hud_scene.instantiate()
+	get_parent().call_deferred("add_child", hud_instance)
+	health_changed.connect(hud_instance.update_health)
+	coins_changed.connect(hud_instance.update_coins)
+	hud_instance.update_health(health, max_health)
+	hud_instance.update_coins(coins)
+	
+	pause_menu_instance = pause_menu_scene.instantiate()
+	get_parent().call_deferred("add_child", pause_menu_instance)
+
 
 func can_attack() -> bool:
 	return has_blade
