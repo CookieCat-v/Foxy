@@ -10,10 +10,6 @@ extends CharacterBody2D
 @export var attack_damage: int = 1
 @export var max_health: int = 3
 var health: int = max_health
-var coins: int = 0
-
-signal health_changed(current_health: int, max_health: int)
-signal coins_changed(current_coins: int)
 
 
 var jump_speed: float = 320.0
@@ -71,11 +67,6 @@ func stop_move() -> void:
 
 func take_damage(damage: int) -> void:
 	health -= damage
-	health_changed.emit(health, max_health)
-
-func add_coin(amount: int = 1) -> void:
-	coins += amount
-	coins_changed.emit(coins)
 
 # Change the animation of the character on the next frame
 func change_animation(new_animation: String) -> void:
