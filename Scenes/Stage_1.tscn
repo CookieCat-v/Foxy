@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ci5tpl05cnmra" path="res://Assets/island/background/small_cloud_1.png" id="6_j3e1v"]
 [ext_resource type="Texture2D" uid="uid://1t3pkyls8wyt" path="res://Assets/island/background/small_cloud_2.png" id="7_uxekn"]
 [ext_resource type="Texture2D" uid="uid://dcvs45slp2tv3" path="res://Assets/island/background/small_cloud_3.png" id="8_4sq3n"]
-[ext_resource type="PackedScene" uid="uid://d0jou4iuydvkg" path="res://Scenes/Player/player.tscn" id="9_lascg"]
+[ext_resource type="PackedScene" uid="uid://d0jou4iuydvkg" path="res://Scenes/player/player.tscn" id="9_lascg"]
 [ext_resource type="PackedScene" uid="uid://cojjwfmfc8e5q" path="res://Scenes/Enemies/Mushroom/mushroom.tscn" id="10_ot28h"]
 [ext_resource type="PackedScene" uid="uid://dfv5k401j1xjh" path="res://Scenes/Enemies/barrel/barrel.tscn" id="11_6vl0h"]
 [ext_resource type="PackedScene" uid="uid://trgc0h0dnqri" path="res://Scenes/Enemies/spike/spike.tscn" id="12_p5b2r"]
@@ -235,17 +235,6 @@ position = Vector2(2274, 633)
 sprite_frames = SubResource("SpriteFrames_ot28h")
 animation = &"big"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1210253437]
-
-[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2109252888]
-texture_filter = 2
-offset_left = 52.999996
-offset_top = 67.0
-offset_right = 93.0
-offset_bottom = 90.0
-scale = Vector2(3.9975696, 2.084772)
-theme_override_constants/outline_size = 4
-text = "0"
 
 [node name="StopBoatSignalArea" type="Area2D" parent="." unique_id=544941544]
 scale = Vector2(0.9986464, 0.9980269)
