@@ -6,9 +6,9 @@ class_name SettingsMenu
 @onready var sfx_slider = $PopupBackground/VBoxContainer/SFXRow/SFXSlider
 @onready var close_btn = $PopupBackground/VBoxContainer/CloseBtn
 
-var master_bus_idx = AudioServer.get_bus_index("Master")
-var bgm_bus_idx = AudioServer.get_bus_index("BGM")
-var sfx_bus_idx = AudioServer.get_bus_index("SFX")
+var master_bus_idx = "Master"
+var bgm_bus_idx = "Music"
+var sfx_bus_idx = "SFX"
 
 func _ready() -> void:
 	# Hide by default if it's an overlay
@@ -34,18 +34,18 @@ func _add_hover_effect(btn: Control) -> void:
 
 func open() -> void:
 	show()
-	master_slider.value = db_to_linear(AudioServer.get_bus_volume_db(master_bus_idx))
-	bgm_slider.value = db_to_linear(AudioServer.get_bus_volume_db(bgm_bus_idx))
-	sfx_slider.value = db_to_linear(AudioServer.get_bus_volume_db(sfx_bus_idx))
+	master_slider.value = db_to_linear(AudioManager.get_bus_volume(master_bus_idx))
+	bgm_slider.value = db_to_linear(AudioManager.get_bus_volume(bgm_bus_idx))
+	sfx_slider.value = db_to_linear(AudioManager.get_bus_volume(sfx_bus_idx))
 
 func _on_master_slider_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(master_bus_idx, linear_to_db(value))
+	AudioManager.set_bus_volume(master_bus_idx, linear_to_db(value))
 
 func _on_bgm_slider_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(bgm_bus_idx, linear_to_db(value))
+	AudioManager.set_bus_volume(bgm_bus_idx, linear_to_db(value))
 
 func _on_sfx_slider_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(sfx_bus_idx, linear_to_db(value))
+	AudioManager.set_bus_volume(sfx_bus_idx, linear_to_db(value))
 
 func _on_close_pressed() -> void:
 	hide()

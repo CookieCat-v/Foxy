@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0jou4iuydvkg"]
 
-[ext_resource type="Script" uid="uid://bvq7pofu61k1d" path="res://Scenes/player/player.gd" id="1_spm8d"]
+[ext_resource type="Script" uid="uid://bvq7pofu61k1d" path="res://Scenes/player/player.gd" id="1_wodsf"]
 [ext_resource type="Texture2D" uid="uid://m4di78taixns" path="res://Assets/foxy/fox_hat/fox_defeat_1.png" id="4_c35mf"]
 [ext_resource type="Texture2D" uid="uid://b6jgthsrynctr" path="res://Assets/foxy/fox_hat/fox_defeat_2.png" id="5_65viv"]
 [ext_resource type="Texture2D" uid="uid://fii540ugfj5n" path="res://Assets/foxy/fox_hat/fox_defeat_3.png" id="6_x7c3f"]
@@ -101,7 +101,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D" unique_id=1495051546]
 collision_layer = 2
 collision_mask = 5
-script = ExtResource("1_spm8d")
+script = ExtResource("1_wodsf")
 metadata/_custom_type_script = "uid://w7xdmsdvf5vd"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1994915027]

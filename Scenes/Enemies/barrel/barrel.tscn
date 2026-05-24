@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b564c7jpiwbh0" path="res://Assets/monsters/barrel/barrel_atk_05.png" id="5_p4rqe"]
 [ext_resource type="Texture2D" uid="uid://dfnk2rp7cs1vg" path="res://Assets/monsters/barrel/barrel_01.png" id="6_rf82f"]
 [ext_resource type="Texture2D" uid="uid://bwg8hpav3cy74" path="res://Assets/monsters/barrel/barrel_02.png" id="7_0eyqb"]
-[ext_resource type="Script" uid="uid://csu2b21cwchqw" path="res://scripts/hurt_area_2d.gd" id="9_7flyq"]
+[ext_resource type="Script" uid="uid://csu2b21cwchqw" path="res://Scripts/hurt_area_2d.gd" id="9_7flyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq6jo"]
 

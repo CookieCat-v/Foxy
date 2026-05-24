@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://brv1yqrlmhdpj" path="res://Scenes/Enemies/barrel/barrel_bullet.gd" id="1_5f7u3"]
 [ext_resource type="Texture2D" uid="uid://brd4e00wnv2hw" path="res://Assets/Art/enemy/barrel/barrel_bullet.png" id="2_5f7u3"]
-[ext_resource type="Script" uid="uid://bj3stuiih12nn" path="res://scripts/hit_area_2d.gd" id="3_mkrp2"]
+[ext_resource type="Script" uid="uid://bj3stuiih12nn" path="res://Scripts/hit_area_2d.gd" id="3_mkrp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkrp2"]
 size = Vector2(5, 6)

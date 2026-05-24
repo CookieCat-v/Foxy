@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://coxll7exm8fhe" path="res://icon.svg" id="1_37kl0"]
 [ext_resource type="PackedScene" uid="uid://cojjwfmfc8e5q" path="res://Scenes/Enemies/Mushroom/mushroom.tscn" id="2_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://dfv5k401j1xjh" path="res://Scenes/Enemies/barrel/barrel.tscn" id="3_6uqi0"]
-[ext_resource type="Script" uid="uid://dglp2r52eols5" path="res://scripts/autoload/game_manager.gd" id="4_ppyta"]
+[ext_resource type="Script" uid="uid://dglp2r52eols5" path="res://Scripts/autoload/game_manager.gd" id="4_ppyta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8uh7m"]
 size = Vector2(119, 120)

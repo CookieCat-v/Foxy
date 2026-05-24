@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://hudsceneuid"]
 
-[ext_resource type="Script" uid="uid://cej6u08jdlbqk" path="res://scripts/ui/hud.gd" id="1_kpdpg"]
+[ext_resource type="Script" uid="uid://cej6u08jdlbqk" path="res://Scripts/ui/hud.gd" id="1_kpdpg"]
 [ext_resource type="Theme" uid="uid://dwprtnpmwr772" path="res://Scenes/ui/pixel_theme.tres" id="2_theme"]
 [ext_resource type="Texture2D" uid="uid://g6knpxl51v8a" path="res://Assets/items/coin.png" id="3_coin"]
 
