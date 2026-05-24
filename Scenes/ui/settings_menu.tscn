@@ -1,0 +1,152 @@
+[gd_scene load_steps=8 format=3 uid="uid://settingsmenu"]
+
+[ext_resource type="Theme" path="res://Scenes/ui/pixel_theme.tres" id="1_theme"]
+[ext_resource type="Script" path="res://Scripts/ui/settings_menu.gd" id="2_script"]
+[ext_resource type="Texture2D" path="res://Assets/ui/close_button.png" id="3_close"]
+[ext_resource type="Texture2D" path="res://Assets/ui/popup.png" id="4_popup"]
+[ext_resource type="Texture2D" path="res://Assets/ui/settings_button.png" id="5_grabber"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_bg"]
+bg_color = Color(0.15, 0.15, 0.2, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.05, 0.05, 0.1, 1)
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_fill"]
+bg_color = Color(0.4, 0.8, 0.3, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 0
+border_width_bottom = 4
+border_color = Color(0.1, 0.4, 0.1, 1)
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+anti_aliasing = false
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_theme")
+script = ExtResource("2_script")
+
+[node name="PopupBackground" type="NinePatchRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -180.0
+offset_right = 220.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_popup")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="PopupBackground/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="MasterRow" type="VBoxContainer" parent="PopupBackground/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupBackground/VBoxContainer/MasterRow"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "MASTER VOLUME"
+
+[node name="MasterSlider" type="HSlider" parent="PopupBackground/VBoxContainer/MasterRow"]
+texture_filter = 1
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("5_grabber")
+theme_override_icons/grabber_highlight = ExtResource("5_grabber")
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_bg")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_fill")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_fill")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="BGMRow" type="VBoxContainer" parent="PopupBackground/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupBackground/VBoxContainer/BGMRow"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "MUSIC"
+
+[node name="BGMSlider" type="HSlider" parent="PopupBackground/VBoxContainer/BGMRow"]
+texture_filter = 1
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("5_grabber")
+theme_override_icons/grabber_highlight = ExtResource("5_grabber")
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_bg")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_fill")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_fill")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFXRow" type="VBoxContainer" parent="PopupBackground/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PopupBackground/VBoxContainer/SFXRow"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="PopupBackground/VBoxContainer/SFXRow"]
+texture_filter = 1
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("5_grabber")
+theme_override_icons/grabber_highlight = ExtResource("5_grabber")
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_bg")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_fill")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_fill")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="CloseBtn" type="TextureButton" parent="PopupBackground/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+texture_normal = ExtResource("3_close")
+stretch_mode = 3

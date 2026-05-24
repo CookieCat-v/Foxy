@@ -235,17 +235,6 @@ position = Vector2(2274, 633)
 sprite_frames = SubResource("SpriteFrames_ot28h")
 animation = &"big"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1210253437]
-
-[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2109252888]
-texture_filter = 2
-offset_left = 52.999996
-offset_top = 67.0
-offset_right = 93.0
-offset_bottom = 90.0
-scale = Vector2(3.9975696, 2.084772)
-theme_override_constants/outline_size = 4
-text = "0"
 
 [node name="StopBoatSignalArea" type="Area2D" parent="." unique_id=544941544]
 scale = Vector2(0.9986464, 0.9980269)
