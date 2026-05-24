@@ -1,0 +1,292 @@
+[gd_scene format=4 uid="uid://bis4n5r8jsyf4"]
+
+[ext_resource type="TileSet" uid="uid://bd6acimo0npld" path="res://Assets/Tileset/island_tileset.tres" id="1_vi3up"]
+[ext_resource type="Texture2D" uid="uid://dcrnqve71d36p" path="res://Assets/island/background/additional_sky.png" id="2_p5b2r"]
+[ext_resource type="Texture2D" uid="uid://bqde0l4at7gv8" path="res://Assets/island/background/bg_image.png" id="3_b8u72"]
+[ext_resource type="Texture2D" uid="uid://ck8762h1hy2cf" path="res://Assets/island/background/additional_water.png" id="4_xbh3k"]
+[ext_resource type="Texture2D" uid="uid://m5yds3bm8pou" path="res://Assets/island/background/big_clouds.png" id="5_f65i5"]
+[ext_resource type="Texture2D" uid="uid://ci5tpl05cnmra" path="res://Assets/island/background/small_cloud_1.png" id="6_j3e1v"]
+[ext_resource type="Texture2D" uid="uid://1t3pkyls8wyt" path="res://Assets/island/background/small_cloud_2.png" id="7_uxekn"]
+[ext_resource type="Texture2D" uid="uid://dcvs45slp2tv3" path="res://Assets/island/background/small_cloud_3.png" id="8_4sq3n"]
+[ext_resource type="PackedScene" uid="uid://d0jou4iuydvkg" path="res://Scenes/player/player.tscn" id="9_lascg"]
+[ext_resource type="PackedScene" uid="uid://cojjwfmfc8e5q" path="res://Scenes/Enemies/Mushroom/mushroom.tscn" id="10_ot28h"]
+[ext_resource type="PackedScene" uid="uid://dfv5k401j1xjh" path="res://Scenes/Enemies/barrel/barrel.tscn" id="11_6vl0h"]
+[ext_resource type="PackedScene" uid="uid://trgc0h0dnqri" path="res://Scenes/Enemies/spike/spike.tscn" id="12_p5b2r"]
+[ext_resource type="Texture2D" uid="uid://dekyi7oa4n0sg" path="res://Assets/Art/island/background/water_reflect_big_01.png" id="13_j3e1v"]
+[ext_resource type="Texture2D" uid="uid://b6dilwf04d4be" path="res://Assets/Art/island/background/water_reflect_big_02.png" id="14_uxekn"]
+[ext_resource type="Texture2D" uid="uid://drl3x1wfs0vai" path="res://Assets/Art/island/background/water_reflect_big_03.png" id="15_4sq3n"]
+[ext_resource type="Texture2D" uid="uid://c5ur36rqix0vh" path="res://Assets/Art/island/background/water_reflect_big_04.png" id="16_lascg"]
+[ext_resource type="Texture2D" uid="uid://clqwctkiuocld" path="res://Assets/Art/island/background/water_reflect_medium_01.png" id="17_xa126"]
+[ext_resource type="Texture2D" uid="uid://cc473o8yawaex" path="res://Assets/Art/island/background/water_reflect_medium_02.png" id="18_m81ty"]
+[ext_resource type="Texture2D" uid="uid://853x36mkfxu8" path="res://Assets/Art/island/background/water_reflect_medium_03.png" id="19_005gm"]
+[ext_resource type="Texture2D" uid="uid://7ph1avmw5ka6" path="res://Assets/Art/island/background/water_reflect_medium_04.png" id="20_ymdf8"]
+[ext_resource type="Texture2D" uid="uid://do3ghl5b5mpgy" path="res://Assets/Art/island/background/water_reflect_small_01.png" id="21_7owas"]
+[ext_resource type="Texture2D" uid="uid://cm71bsgwox0jq" path="res://Assets/Art/island/background/water_reflect_small_02.png" id="22_e0oj7"]
+[ext_resource type="Texture2D" uid="uid://d0b0yg85xphrg" path="res://Assets/Art/island/background/water_reflect_small_03.png" id="23_urglv"]
+[ext_resource type="Texture2D" uid="uid://o4iqthotrkum" path="res://Assets/Art/island/background/water_reflect_small_04.png" id="24_t0pm4"]
+
+[sub_resource type="GDScript" id="GDScript_lfxmx"]
+script/source = "extends ParallaxLayer
+
+func _process(delta: float) -> void:
+	motion_offset.x -= delta * 20
+"
+
+[sub_resource type="GDScript" id="GDScript_j3e1v"]
+script/source = "extends ParallaxLayer
+
+@onready var big_waterReflect = $BigWaterReflect
+@onready var big_waterReflect2 = $BigWaterReflect2
+@onready var medium_waterReflect = $MediumWaterReflect
+@onready var small_waterReflect = $SmallWaterReflect
+
+func _ready() -> void:
+	big_waterReflect.play(\"big\")
+	big_waterReflect2.play(\"big\")
+	medium_waterReflect.play(\"medium\")
+	small_waterReflect.play(\"small\")
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ot28h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_j3e1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_uxekn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4sq3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lascg")
+}],
+"loop": true,
+"name": &"big",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_xa126")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_m81ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_005gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ymdf8")
+}],
+"loop": true,
+"name": &"medium",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_7owas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_e0oj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_urglv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_t0pm4")
+}],
+"loop": true,
+"name": &"small",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5b2r"]
+size = Vector2(33, 32)
+
+[node name="Stage" type="Node2D" unique_id=1839555294]
+
+[node name="World" type="TileMapLayer" parent="." unique_id=2088249150]
+position = Vector2(5, 356)
+tile_map_data = PackedByteArray("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AABYAAYAAAANAAMAAABZAAYAAAANAAMAAABaAAYAAAANAAMAAABbAAYAAAANAAMAAABcAAYAAAANAAMAAABdAAYAAAANAAMAAABnAAcAAAABAAQAAABoAAcAAAABAAQAAABpAAcAAAABAAQAAABqAAcAAAABAAQAAABrAAcAAAABAAQAAABsAAcAAAABAAQAAABtAAcAAAABAAQAAABuAAcAAAACAAQAAABcAAMAAAAAAAQAAABdAAMAAAABAAQAAABgAAMAAAACAAQAAABeAAMAAAABAAQAAABfAAMAAAABAAQAAABiAAIAAAAEAAQAAABkAAEAAAAEAAQAAABmAAAAAAAEAAQAAABkAAYAAAAEAAAAAABmAAYAAAAEAAAAAABcAAIAAwAAAAAAAQBdAAIAAwAAAAAAAQBeAAIAAwAAAAAAAQBfAAIAAwAAAAAAAQBgAAIAAwAAAAAAAQBiAAEAAwAAAAAAAQBkAAAAAwAAAAAAAQBmAP//AwAAAAAAAQBlAAYAAwAAAAAAAQBXAAUAAwAAAAAAAQBYAAUAAwAAAAAAAQBZAAUAAwAAAAAAAQBaAAUAAwAAAAAAAQBoAAYAAwAAAAAAAgBbAAUAAwAAAAAAAgBsAAUAAwAAAAAABAA=")
+tile_set = ExtResource("1_vi3up")
+
+[node name="Player" parent="." unique_id=812582594 instance=ExtResource("9_lascg")]
+position = Vector2(-21, 573)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=295123462]
+
+[node name="Barrel" parent="Enemies" unique_id=491401042 instance=ExtResource("11_6vl0h")]
+position = Vector2(1238, 309)
+
+[node name="Barrel2" parent="Enemies" unique_id=368210165 instance=ExtResource("11_6vl0h")]
+position = Vector2(226, 533)
+
+[node name="Mushroom" parent="Enemies" unique_id=1167331425 instance=ExtResource("10_ot28h")]
+position = Vector2(555, 566)
+
+[node name="Spikes" type="Node2D" parent="Enemies" unique_id=396486594]
+
+[node name="Spike" parent="Enemies/Spikes" unique_id=167053610 instance=ExtResource("12_p5b2r")]
+position = Vector2(1067, 563)
+
+[node name="Spike2" parent="Enemies/Spikes" unique_id=347051834 instance=ExtResource("12_p5b2r")]
+position = Vector2(3028, 562)
+
+[node name="Spike3" parent="Enemies/Spikes" unique_id=1141019946 instance=ExtResource("12_p5b2r")]
+position = Vector2(3058, 562)
+
+[node name="Spike4" parent="Enemies/Spikes" unique_id=1136781901 instance=ExtResource("12_p5b2r")]
+position = Vector2(3086, 562)
+
+[node name="Spike5" parent="Enemies/Spikes" unique_id=2045117324 instance=ExtResource("12_p5b2r")]
+position = Vector2(3114, 562)
+
+[node name="Spike6" parent="Enemies/Spikes" unique_id=1326139828 instance=ExtResource("12_p5b2r")]
+position = Vector2(3142, 563)
+
+[node name="Spike7" parent="Enemies/Spikes" unique_id=1666983852 instance=ExtResource("12_p5b2r")]
+position = Vector2(3170, 562)
+
+[node name="Spike8" parent="Enemies/Spikes" unique_id=1414982119 instance=ExtResource("12_p5b2r")]
+position = Vector2(3192, 562)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=398162512]
+
+[node name="ParallaxLayerEnvironment" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1539673067]
+position = Vector2(-250, 267)
+motion_scale = Vector2(0.001, 0.8)
+motion_mirroring = Vector2(767, 0)
+
+[node name="SkySprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerEnvironment" unique_id=1662252961]
+position = Vector2(417, -11)
+scale = Vector2(26.125, 20.531)
+texture = ExtResource("2_p5b2r")
+
+[node name="SeaSkySprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerEnvironment" unique_id=714671570]
+position = Vector2(0, 57)
+scale = Vector2(2, 2)
+texture = ExtResource("3_b8u72")
+centered = false
+
+[node name="WaterSprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerEnvironment" unique_id=21070541]
+position = Vector2(384.5, 404.5)
+scale = Vector2(23.969, 5.969)
+texture = ExtResource("4_xbh3k")
+
+[node name="ParallaxLayerCloud" type="ParallaxLayer" parent="ParallaxBackground" unique_id=79046696]
+position = Vector2(-250, 267)
+scale = Vector2(1.0028377, 1)
+motion_scale = Vector2(0.001, 0.8)
+motion_mirroring = Vector2(508, 0)
+script = SubResource("GDScript_lfxmx")
+
+[node name="BigClouds" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerCloud" unique_id=319384704]
+position = Vector2(0, 111)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("5_f65i5")
+centered = false
+
+[node name="BigClouds2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerCloud" unique_id=157178611]
+position = Vector2(503.57104, 111)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("5_f65i5")
+centered = false
+
+[node name="ParallaxLayerSmallCloud" type="ParallaxLayer" parent="ParallaxBackground" unique_id=240139540]
+motion_scale = Vector2(0.001, 0.8)
+motion_mirroring = Vector2(900, 0)
+
+[node name="SmallCloud" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerSmallCloud" unique_id=665940277]
+position = Vector2(68, 241)
+scale = Vector2(2, 2)
+texture = ExtResource("6_j3e1v")
+
+[node name="SmallCloud2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerSmallCloud" unique_id=1872205528]
+position = Vector2(386, 152)
+scale = Vector2(2, 2)
+texture = ExtResource("7_uxekn")
+
+[node name="SmallCloud3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerSmallCloud" unique_id=1288968897]
+position = Vector2(653, 274)
+scale = Vector2(1.5, 2)
+texture = ExtResource("8_4sq3n")
+
+[node name="ParallaxLayerWaterReflect" type="ParallaxLayer" parent="ParallaxBackground" unique_id=922955881]
+script = SubResource("GDScript_j3e1v")
+
+[node name="BigWaterReflect" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayerWaterReflect" unique_id=351174109]
+position = Vector2(2060, 623)
+sprite_frames = SubResource("SpriteFrames_ot28h")
+animation = &"small"
+
+[node name="BigWaterReflect2" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayerWaterReflect" unique_id=1446477184]
+position = Vector2(2492, 621)
+sprite_frames = SubResource("SpriteFrames_ot28h")
+animation = &"small"
+
+[node name="MediumWaterReflect" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayerWaterReflect" unique_id=1813199138]
+position = Vector2(1310, 619)
+sprite_frames = SubResource("SpriteFrames_ot28h")
+animation = &"big"
+
+[node name="SmallWaterReflect" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayerWaterReflect" unique_id=1856737173]
+position = Vector2(2274, 633)
+sprite_frames = SubResource("SpriteFrames_ot28h")
+animation = &"big"
+
+
+[node name="StopBoatSignalArea" type="Area2D" parent="." unique_id=544941544]
+scale = Vector2(0.9986464, 0.9980269)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StopBoatSignalArea" unique_id=831400529]
+position = Vector2(2612, 597)
+shape = SubResource("RectangleShape2D_p5b2r")
+
+[connection signal="body_entered" from="World/Coin" to="World/Coin" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86226" to="World/@Area2D@86226" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86227" to="World/@Area2D@86227" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86228" to="World/@Area2D@86228" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86229" to="World/@Area2D@86229" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86230" to="World/@Area2D@86230" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86231" to="World/@Area2D@86231" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86232" to="World/@Area2D@86232" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86233" to="World/@Area2D@86233" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86234" to="World/@Area2D@86234" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86235" to="World/@Area2D@86235" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86236" to="World/@Area2D@86236" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86237" to="World/@Area2D@86237" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86238" to="World/@Area2D@86238" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86240" to="World/@Area2D@86240" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86241" to="World/@Area2D@86241" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86242" to="World/@Area2D@86242" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86243" to="World/@Area2D@86243" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86244" to="World/@Area2D@86244" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86245" to="World/@Area2D@86245" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86246" to="World/@Area2D@86246" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86247" to="World/@Area2D@86247" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86248" to="World/@Area2D@86248" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86249" to="World/@Area2D@86249" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86250" to="World/@Area2D@86250" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86251" to="World/@Area2D@86251" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86252" to="World/@Area2D@86252" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86253" to="World/@Area2D@86253" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86254" to="World/@Area2D@86254" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86255" to="World/@Area2D@86255" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86256" to="World/@Area2D@86256" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86257" to="World/@Area2D@86257" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86258" to="World/@Area2D@86258" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86259" to="World/@Area2D@86259" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86260" to="World/@Area2D@86260" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86261" to="World/@Area2D@86261" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86262" to="World/@Area2D@86262" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86263" to="World/@Area2D@86263" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86264" to="World/@Area2D@86264" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86265" to="World/@Area2D@86265" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86266" to="World/@Area2D@86266" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86267" to="World/@Area2D@86267" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86268" to="World/@Area2D@86268" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86269" to="World/@Area2D@86269" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86270" to="World/@Area2D@86270" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86271" to="World/@Area2D@86271" method="_on_body_entered"]
+[connection signal="body_entered" from="World/@Area2D@86272" to="World/@Area2D@86272" method="_on_body_entered"]

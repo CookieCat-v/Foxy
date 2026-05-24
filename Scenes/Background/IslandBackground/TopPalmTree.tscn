@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://2xfwp212t71a"]
+
+[ext_resource type="Texture2D" uid="uid://getm5kr68qwe" path="res://Assets/island/front_palm_trees/front_palm_tree_top_01.png" id="1_t4eco"]
+[ext_resource type="Texture2D" uid="uid://07ilhsckqwm6" path="res://Assets/island/front_palm_trees/front_palm_tree_top_02.png" id="2_gtfyj"]
+
+[sub_resource type="GDScript" id="GDScript_poea8"]
+script/source = "extends StaticBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$AnimatedSprite2D.play(\"default\")
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rho6m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_t4eco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gtfyj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TopPalmTree" type="StaticBody2D" unique_id=1204087241]
+script = SubResource("GDScript_poea8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=772472394]
+position = Vector2(2, 0)
+polygon = PackedVector2Array(-21, -18, 18, -18, 25, 1, 17, 19, -18, 19, -28, 2)
+one_way_collision = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=952833429]
+sprite_frames = SubResource("SpriteFrames_rho6m")

@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dfv5k401j1xjh"]
+
+[ext_resource type="Script" uid="uid://dehyp6p085jio" path="res://Scenes/Enemies/barrel/barrel.gd" id="1_lpcl7"]
+[ext_resource type="Texture2D" uid="uid://de0p6wfv2rc7g" path="res://Assets/monsters/barrel/barrel_atk_01.png" id="1_u2jso"]
+[ext_resource type="Texture2D" uid="uid://2igv4kkux8c6" path="res://Assets/monsters/barrel/barrel_atk_02.png" id="2_lpcl7"]
+[ext_resource type="Texture2D" uid="uid://lxyxy6hj6rja" path="res://Assets/monsters/barrel/barrel_atk_03.png" id="3_7flyq"]
+[ext_resource type="Texture2D" uid="uid://c2c1sjpl4vgrq" path="res://Assets/monsters/barrel/barrel_atk_04.png" id="4_hwe78"]
+[ext_resource type="Texture2D" uid="uid://b564c7jpiwbh0" path="res://Assets/monsters/barrel/barrel_atk_05.png" id="5_p4rqe"]
+[ext_resource type="Texture2D" uid="uid://dfnk2rp7cs1vg" path="res://Assets/monsters/barrel/barrel_01.png" id="6_rf82f"]
+[ext_resource type="Texture2D" uid="uid://bwg8hpav3cy74" path="res://Assets/monsters/barrel/barrel_02.png" id="7_0eyqb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cq6jo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emux3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u2jso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lpcl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7flyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hwe78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p4rqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lpcl7")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("6_rf82f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0eyqb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[node name="Barrel" type="Area2D" unique_id=491401042]
+collision_layer = 8
+script = ExtResource("1_lpcl7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1169545005]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_cq6jo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1246285977]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_emux3")
+animation = &"attack"
+frame = 5
+frame_progress = 1.0
+
+[node name="FrontCast2D" type="RayCast2D" parent="." unique_id=1060672472]
+position = Vector2(8, 0)
+target_position = Vector2(200, 0)
+collision_mask = 2
+
+[node name="BackCast2D" type="RayCast2D" parent="." unique_id=1424527218]
+position = Vector2(-8, 0)
+target_position = Vector2(200, 0)
+collision_mask = 2
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_attack_finished"]
