@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Foxy_dev"
-run/main_scene="uid://c8acwwgx2fqew"
+run/main_scene="uid://bis4n5r8jsyf4"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

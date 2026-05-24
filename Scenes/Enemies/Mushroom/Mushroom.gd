@@ -40,3 +40,9 @@ func _update_orientation() -> void:
 		else:
 			direction_node.scale.x = -1
 	
+
+
+func _on_hurt_area_2d_hurt(direction: Vector2, damage: float) -> void:
+	print_debug("Mushroom died")
+	queue_free()
+	pass # Replace with function body.

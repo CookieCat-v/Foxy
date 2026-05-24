@@ -43,3 +43,9 @@ func _fire()->void:
 func _on_attack_finished() -> void:
 	if (anim.animation=="attack"): 
 		anim.play("idle")
+
+#died
+func _on_hurt_area_2d_hurt(direction: Vector2, damage: float) -> void:
+	print_debug("Barrel died")
+	queue_free()
+	pass # Replace with function body.
