@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b564c7jpiwbh0" path="res://Assets/monsters/barrel/barrel_atk_05.png" id="5_p4rqe"]
 [ext_resource type="Texture2D" uid="uid://dfnk2rp7cs1vg" path="res://Assets/monsters/barrel/barrel_01.png" id="6_rf82f"]
 [ext_resource type="Texture2D" uid="uid://bwg8hpav3cy74" path="res://Assets/monsters/barrel/barrel_02.png" id="7_0eyqb"]
+[ext_resource type="Script" uid="uid://csu2b21cwchqw" path="res://Scripts/hurt_area_2d.gd" id="9_7flyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq6jo"]
 
@@ -73,4 +74,15 @@ position = Vector2(-8, 0)
 target_position = Vector2(200, 0)
 collision_mask = 2
 
+[node name="HurtArea2D" type="Area2D" parent="." unique_id=523147946]
+collision_layer = 16
+collision_mask = 3
+script = ExtResource("9_7flyq")
+metadata/_custom_type_script = "uid://csu2b21cwchqw"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtArea2D" unique_id=1969574728]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_cq6jo")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_attack_finished"]
+[connection signal="hurt" from="HurtArea2D" to="." method="_on_hurt_area_2d_hurt"]

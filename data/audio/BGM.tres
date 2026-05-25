@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AudioClip" format=3 uid="uid://b3725yfwrs6c5"]
+
+[ext_resource type="Script" uid="uid://bbckbjsernvwt" path="res://Scripts/audio/audio_clip.gd" id="1_65mjf"]
+[ext_resource type="AudioStream" uid="uid://0cu2yfdmugja" path="res://Assets/Audio/music/music.ogg" id="2_il1dl"]
+
+[resource]
+script = ExtResource("1_65mjf")
+clip_id = "BGM"
+stream = ExtResource("2_il1dl")
+metadata/_custom_type_script = "uid://bbckbjsernvwt"

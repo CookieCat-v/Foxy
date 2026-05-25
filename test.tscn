@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://coxll7exm8fhe" path="res://icon.svg" id="1_37kl0"]
 [ext_resource type="PackedScene" uid="uid://cojjwfmfc8e5q" path="res://Scenes/Enemies/Mushroom/mushroom.tscn" id="2_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://dfv5k401j1xjh" path="res://Scenes/Enemies/barrel/barrel.tscn" id="3_6uqi0"]
+[ext_resource type="Script" uid="uid://dglp2r52eols5" path="res://Scripts/autoload/game_manager.gd" id="4_ppyta"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8uh7m"]
 size = Vector2(119, 120)
@@ -23,9 +24,8 @@ shape = SubResource("RectangleShape2D_8uh7m")
 texture = ExtResource("1_37kl0")
 
 [node name="Mushroom" parent="." unique_id=1167331425 instance=ExtResource("2_8uh7m")]
-position = Vector2(-572, -274)
+position = Vector2(-378, -116)
 collision_layer = 6
-speed = 5000
 
 [node name="Camera2D" type="Camera2D" parent="Mushroom" unique_id=1931394158]
 scale = Vector2(0.96, 1)
@@ -64,3 +64,7 @@ shape = SubResource("RectangleShape2D_6uqi0")
 [node name="Barrel" parent="." unique_id=491401042 instance=ExtResource("3_6uqi0")]
 position = Vector2(-500, -206)
 direction = -1
+
+[node name="GameManager" type="Node" parent="." unique_id=776872857]
+script = ExtResource("4_ppyta")
+metadata/_custom_type_script = "uid://dglp2r52eols5"
