@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv5er34emc8g1"
-path="res://.godot/imported/fox_jump_2.png-b72d337b5c1649e425daa2ade6fb1e11.ctex"
+path="res://.godot/imported/fox_jump_2.png-328280b20f7dc23f9871ed7b34ae0fd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/foxy/foxy/fox_hat_blade/fox_jump_2.png"
-dest_files=["res://.godot/imported/fox_jump_2.png-b72d337b5c1649e425daa2ade6fb1e11.ctex"]
+source_file="res://Assets/Art/foxy/foxy/fox_hat_blade/fox_jump_2.png"
+dest_files=["res://.godot/imported/fox_jump_2.png-328280b20f7dc23f9871ed7b34ae0fd8.ctex"]
 
 [params]
 

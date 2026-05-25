@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brx56liv83bir"
-path="res://.godot/imported/starfish_atk_04.png-826b4b8ff4878bf309fd4a35be2b7ed8.ctex"
+path="res://.godot/imported/starfish_atk_04.png-09724373bd2bf45580098da44f22ddc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/monsters/starfish/starfish_atk_04.png"
-dest_files=["res://.godot/imported/starfish_atk_04.png-826b4b8ff4878bf309fd4a35be2b7ed8.ctex"]
+source_file="res://Assets/monsters/starfish/starfish_atk_04.png"
+dest_files=["res://.godot/imported/starfish_atk_04.png-09724373bd2bf45580098da44f22ddc6.ctex"]
 
 [params]
 

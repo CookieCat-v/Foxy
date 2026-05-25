@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4rqp2pt34uek"
-path="res://.godot/imported/platform.png-5b952394bb99336d6156d89332666115.ctex"
+path="res://.godot/imported/platform.png-f5f13748dc195a9c0ea5b075392792bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/island/objects/flag/platform.png"
-dest_files=["res://.godot/imported/platform.png-5b952394bb99336d6156d89332666115.ctex"]
+source_file="res://Assets/Art/island/objects/flag/platform.png"
+dest_files=["res://.godot/imported/platform.png-f5f13748dc195a9c0ea5b075392792bc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sd3usy77q76p"
-path="res://.godot/imported/front_palm_tree_top_03.png-ebd1f4e0e9a9db521e610afa8acf76bf.ctex"
+path="res://.godot/imported/front_palm_tree_top_03.png-5c22a4c77b2d87380d8b2e264e9a3d01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/foxy/foxy/palm_tree/front_palm_tree_top_03.png"
-dest_files=["res://.godot/imported/front_palm_tree_top_03.png-ebd1f4e0e9a9db521e610afa8acf76bf.ctex"]
+source_file="res://Assets/Art/foxy/foxy/palm_tree/front_palm_tree_top_03.png"
+dest_files=["res://.godot/imported/front_palm_tree_top_03.png-5c22a4c77b2d87380d8b2e264e9a3d01.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpb4wgmvkk3w2"
-path="res://.godot/imported/blade_anim_3.png-61c20db5a8bf7a69461a53b7bc771d5a.ctex"
+path="res://.godot/imported/blade_anim_3.png-97b5e5f1ed31eb9732234b5242353ab1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/foxy/foxy/blade/blade_anim_3.png"
-dest_files=["res://.godot/imported/blade_anim_3.png-61c20db5a8bf7a69461a53b7bc771d5a.ctex"]
+source_file="res://Assets/Art/foxy/foxy/blade/blade_anim_3.png"
+dest_files=["res://.godot/imported/blade_anim_3.png-97b5e5f1ed31eb9732234b5242353ab1.ctex"]
 
 [params]
 

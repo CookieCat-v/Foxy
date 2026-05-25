@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://07ilhsckqwm6"
-path="res://.godot/imported/front_palm_tree_top_02.png-b20cfa3d09e04642dd95c75e5afd2ad7.ctex"
+path="res://.godot/imported/front_palm_tree_top_02.png-4aef429353f81b4f29a1a75d9a13a8f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/island/front_palm_trees/front_palm_tree_top_02.png"
-dest_files=["res://.godot/imported/front_palm_tree_top_02.png-b20cfa3d09e04642dd95c75e5afd2ad7.ctex"]
+source_file="res://Assets/Art/island/front_palm_trees/front_palm_tree_top_02.png"
+dest_files=["res://.godot/imported/front_palm_tree_top_02.png-4aef429353f81b4f29a1a75d9a13a8f4.ctex"]
 
 [params]
 

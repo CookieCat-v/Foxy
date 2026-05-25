@@ -42,6 +42,6 @@ func collected_blade() -> void:
 
 
 func _on_hurt_area_2d_hurt(direction: Vector2, damage: float) -> void:
-	print_debug("hitted")
+	#print_debug("hitted")
 	fsm.current_state.take_damage(damage)
 	pass # Replace with function body.

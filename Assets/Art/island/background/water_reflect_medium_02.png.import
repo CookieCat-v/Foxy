@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cc473o8yawaex"
-path="res://.godot/imported/water_reflect_medium_02.png-3b89bd63d4303652e48b8401f22c30ba.ctex"
+path="res://.godot/imported/water_reflect_medium_02.png-5c5d49e3ec56f19344665688571b052b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/island/background/water_reflect_medium_02.png"
-dest_files=["res://.godot/imported/water_reflect_medium_02.png-3b89bd63d4303652e48b8401f22c30ba.ctex"]
+source_file="res://Assets/Art/island/background/water_reflect_medium_02.png"
+dest_files=["res://.godot/imported/water_reflect_medium_02.png-5c5d49e3ec56f19344665688571b052b.ctex"]
 
 [params]
 
