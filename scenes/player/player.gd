@@ -1,4 +1,4 @@
-class_name Player
+class_name  Player
 extends BaseCharacter
 
 ## Player character class that handles movement, combat, and state management
