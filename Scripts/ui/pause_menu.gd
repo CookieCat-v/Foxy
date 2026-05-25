@@ -9,7 +9,7 @@ extends CanvasLayer
 @onready var menu_btn = $Control/PopupBackground/VBoxContainer/HBoxContainer/MenuBtn
 
 var master_bus_idx = AudioServer.get_bus_index("Master")
-var bgm_bus_idx = AudioServer.get_bus_index("BGM")
+var bgm_bus_idx = AudioServer.get_bus_index("Music")
 var sfx_bus_idx = AudioServer.get_bus_index("SFX")
 
 func _ready() -> void:

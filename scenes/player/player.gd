@@ -3,7 +3,7 @@ extends BaseCharacter
 
 ## Player character class that handles movement, combat, and state management
 var is_invulnerable: bool = false
-@export var has_blade: bool = false
+@export var has_blade: bool = true
 
 var hud_scene = preload("res://Scenes/ui/hud.tscn")
 var hud_instance = null
@@ -12,6 +12,8 @@ var pause_menu_scene = preload("res://Scenes/ui/pause_menu.tscn")
 var pause_menu_instance = null
 
 func _ready() -> void:
+	get_node("Direction/HitArea2D/CollisionShape2D").disabled = true
+
 	super._ready()
 	fsm = FSM.new(self, $States, $States/Idle)
 	if has_blade:
@@ -35,5 +37,11 @@ func collected_blade() -> void:
 	has_blade = true
 	set_animated_sprite($Direction/BladeAnimatedSprite2D)
 			
-func _on_hurt_area_2d_hurt(_direction: Variant, _damage: Variant) -> void:
-	fsm.current_state.take_damage(_damage)
+
+	
+
+
+func _on_hurt_area_2d_hurt(direction: Vector2, damage: float) -> void:
+	#print_debug("hitted")
+	fsm.current_state.take_damage(damage)
+	pass # Replace with function body.
