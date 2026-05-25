@@ -10,7 +10,7 @@ func _init() -> void:
 func _ready() -> void:
 	print("Node đã sẵn sàng trong Scene Tree!")
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	icon.position = icon_pos
 
 func _on_tree_entered() -> void:

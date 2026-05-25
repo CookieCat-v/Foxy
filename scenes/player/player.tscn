@@ -162,6 +162,8 @@ shape = SubResource("RectangleShape2D_j4nxn")
 
 [node name="HurtArea2D" parent="Direction" unique_id=910064432 instance=ExtResource("20_28m0y")]
 position = Vector2(24, 9)
+collision_layer = 3
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/HurtArea2D" unique_id=162095592]
 position = Vector2(-26, -26.25)
