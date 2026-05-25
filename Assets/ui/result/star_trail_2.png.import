@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://k00g5ydayqh7"
-path="res://.godot/imported/star_trail_2.png-d2e6617466e0a147d419e9f1188f667f.ctex"
+path="res://.godot/imported/star_trail_2.png-2e89d62cad769f513b185e19c2e19da0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/result/star_trail_2.png"
-dest_files=["res://.godot/imported/star_trail_2.png-d2e6617466e0a147d419e9f1188f667f.ctex"]
+source_file="res://assets/ui/result/star_trail_2.png"
+dest_files=["res://.godot/imported/star_trail_2.png-2e89d62cad769f513b185e19c2e19da0.ctex"]
 
 [params]
 

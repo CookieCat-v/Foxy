@@ -10,7 +10,7 @@ func _ready() -> void:
 	_update_direction()
 	anim.play("idle")
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if back_raycast.is_colliding():
 		var collider = back_raycast.get_collider()
 		if collider and collider.name == "Player":

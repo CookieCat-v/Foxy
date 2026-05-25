@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://trgc0h0dnqri"]
 
-[ext_resource type="Texture2D" uid="uid://c8j8q6yfx07du" path="res://Assets/monsters/spikes/spikes.png" id="1_g5huh"]
-[ext_resource type="Script" uid="uid://bj3stuiih12nn" path="res://Scripts/hit_area_2d.gd" id="2_kina6"]
+[ext_resource type="Texture2D" uid="uid://c8j8q6yfx07du" path="res://assets/monsters/spikes/spikes.png" id="1_g5huh"]
+[ext_resource type="Script" uid="uid://bj3stuiih12nn" path="res://scripts/hit_area_2d.gd" id="2_kina6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6ncc"]
 size = Vector2(28, 8)
@@ -12,8 +12,8 @@ size = Vector2(28, 8)
 texture = ExtResource("1_g5huh")
 
 [node name="HitArea2D" type="Area2D" parent="." unique_id=561308889]
-collision_layer = 4
-collision_mask = 10
+collision_layer = 8
+collision_mask = 4
 script = ExtResource("2_kina6")
 metadata/_custom_type_script = "uid://bj3stuiih12nn"
 

@@ -27,7 +27,7 @@ func control_jump() -> bool:
 		return true
 	return false
 
-func take_damage(_damage) -> void:
+func take_damage(damage) -> void:
 	#Player take damage
 	#Player die if health is 0 and change to dead state
 	#Player hurt if health is not 0 and change to hurt state

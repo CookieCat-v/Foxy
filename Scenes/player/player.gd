@@ -3,7 +3,7 @@ extends BaseCharacter
 
 ## Player character class that handles movement, combat, and state management
 var is_invulnerable: bool = false
-@export var has_blade: bool = false
+@export var has_blade: bool = true
 
 var hud_scene = preload("res://Scenes/ui/hud.tscn")
 var hud_instance = null

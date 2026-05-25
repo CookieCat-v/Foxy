@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8usoreyem8l6"
-path="res://.godot/imported/jump_smoke_1.png-c0e15d780066e38f9f0ee2418dae6262.ctex"
+path="res://.godot/imported/jump_smoke_1.png-75faa96e9778c70a1b1e37bcc0a93f97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/foxy/smoke/jump_smoke_1.png"
-dest_files=["res://.godot/imported/jump_smoke_1.png-c0e15d780066e38f9f0ee2418dae6262.ctex"]
+source_file="res://assets/foxy/smoke/jump_smoke_1.png"
+dest_files=["res://.godot/imported/jump_smoke_1.png-75faa96e9778c70a1b1e37bcc0a93f97.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://no2qdg1me4do"
-path="res://.godot/imported/foxy.png-cf9ec248f9c8e832c517e0a506d0212b.ctex"
+path="res://.godot/imported/foxy.png-1b4edb3bd57a4a86ea03685912fe2d4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/result/foxy.png"
-dest_files=["res://.godot/imported/foxy.png-cf9ec248f9c8e832c517e0a506d0212b.ctex"]
+source_file="res://assets/ui/result/foxy.png"
+dest_files=["res://.godot/imported/foxy.png-1b4edb3bd57a4a86ea03685912fe2d4e.ctex"]
 
 [params]
 
