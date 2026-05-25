@@ -66,7 +66,7 @@ shape = SubResource("RectangleShape2D_o1ms0")
 
 [node name="HurtArea2D" type="Area2D" parent="." unique_id=1614693685]
 collision_layer = 16
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("6_p0scm")
 metadata/_custom_type_script = "uid://csu2b21cwchqw"
 
