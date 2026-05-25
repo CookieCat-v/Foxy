@@ -12,7 +12,8 @@ var pause_menu_scene = preload("res://Scenes/ui/pause_menu.tscn")
 var pause_menu_instance = null
 
 func _ready() -> void:
-	$Direction/HitArea2D.hide()
+	get_node("Direction/HitArea2D/CollisionShape2D").disabled = true
+
 	super._ready()
 	fsm = FSM.new(self, $States, $States/Idle)
 	if has_blade:
@@ -36,6 +37,11 @@ func collected_blade() -> void:
 	has_blade = true
 	set_animated_sprite($Direction/BladeAnimatedSprite2D)
 			
-func _on_hurt_area_2d_hurt(_direction: Variant, _damage: Variant) -> void:
-	#print_debug("hit")
-	fsm.current_state.take_damage(_damage)
+
+	
+
+
+func _on_hurt_area_2d_hurt(direction: Vector2, damage: float) -> void:
+	print_debug("hitted")
+	fsm.current_state.take_damage(damage)
+	pass # Replace with function body.

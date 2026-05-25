@@ -29,6 +29,9 @@ func control_jump() -> bool:
 
 func take_damage(damage) -> void:
 	#Player take damage
+	obj.health -= damage
+	if obj.health <= 0:
+		change_state(fsm.states.dead)
 	#Player die if health is 0 and change to dead state
 	#Player hurt if health is not 0 and change to hurt state
 	return

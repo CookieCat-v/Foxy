@@ -14,6 +14,8 @@ func _set_direction(direct: int) -> void:
 
 
 
-func _on_hit_area_2d_hitted(_body: Node2D) -> void:
+
+
+func _on_hit_area_2d_hitted(area: Variant) -> void:
 	queue_free()
 	pass # Replace with function body.

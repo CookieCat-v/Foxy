@@ -128,8 +128,8 @@ size = Vector2(28, 35.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1495051546]
 collision_layer = 2
-collision_mask = 5
 script = ExtResource("1_wodsf")
+max_health = 1
 metadata/_custom_type_script = "uid://w7xdmsdvf5vd"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1994915027]
@@ -193,3 +193,6 @@ script = ExtResource("21_ioxgp")
 
 [node name="Attack" type="Node" parent="States" unique_id=1688154405]
 script = ExtResource("22_cnsyf")
+
+[connection signal="animation_finished" from="Direction/AnimatedSprite2D" to="States/Dead" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="hurt" from="Direction/HurtArea2D" to="." method="_on_hurt_area_2d_hurt"]
