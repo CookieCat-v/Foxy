@@ -12,12 +12,9 @@ func _ready() -> void:
 	$AnimatedSprite2D.play(\"default\")
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == \"Player\":
-		var label = body.get_parent().get_node(\"CanvasLayer\").get_node(\"ScoreLabel\")
-		var currentScore = int(label.text)
-		currentScore += 100
-		label.text = str(currentScore)
-		
+	if body.name == \"Player\" and body.has_method(\"add_coin\"):
+		body.add_coin(1)
+		AudioManager.play_sound(\"coin_pickup\")
 		queue_free()
 "
 

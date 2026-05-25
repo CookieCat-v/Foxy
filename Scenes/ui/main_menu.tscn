@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://mainmenuuid"]
+
+[ext_resource type="Theme" uid="uid://dwprtnpmwr772" path="res://Scenes/ui/pixel_theme.tres" id="1_theme"]
+[ext_resource type="Script" uid="uid://v42yhg3yr78i" path="res://Scripts/ui/main_menu.gd" id="2_0js1b"]
+[ext_resource type="Texture2D" uid="uid://cqwuepjrlyvir" path="res://Assets/ui/green_button.png" id="2_btn_start"]
+[ext_resource type="Texture2D" uid="uid://bv5hjoted6duc" path="res://Assets/ui/settings_button.png" id="3_btn_settings"]
+[ext_resource type="Texture2D" uid="uid://canse1v45ecay" path="res://Assets/ui/close_button.png" id="4_btn_quit"]
+[ext_resource type="Texture2D" uid="uid://bqde0l4at7gv8" path="res://Assets/island/background/bg_image.png" id="6_bg"]
+
+[node name="MainMenu" type="Control" unique_id=279985658]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_theme")
+script = ExtResource("2_0js1b")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1594955418]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=185963699]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -120.0
+offset_right = 200.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1970165880]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.2, 0.1, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 48
+text = "FOXY ADVENTURE"
+horizontal_alignment = 1
+
+[node name="PlayBtn" type="TextureButton" parent="VBoxContainer" unique_id=345657856]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_btn_start")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/PlayBtn" unique_id=78823095]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+text = "PLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1800404172]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="SettingsBtn" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1148896475]
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("3_btn_settings")
+stretch_mode = 3
+
+[node name="QuitBtn" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 32)
+texture_filter = 1
+layout_mode = 2
+texture_normal = ExtResource("4_btn_quit")
+ignore_texture_size = true
+stretch_mode = 5

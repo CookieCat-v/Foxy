@@ -1,23 +1,36 @@
 [gd_scene format=3 uid="uid://dgn17vfjuavu0"]
 
-[ext_resource type="Script" uid="uid://brv1yqrlmhdpj" path="res://Scenes/Enemies/barrel/barrel_bullet.gd" id="1_5f7u3"]
-[ext_resource type="Texture2D" uid="uid://brd4e00wnv2hw" path="res://Assets/Art/enemy/barrel/barrel_bullet.png" id="2_5f7u3"]
+[ext_resource type="Script" uid="uid://brv1yqrlmhdpj" path="res://scenes/Enemies/barrel/barrel_bullet.gd" id="1_5f7u3"]
+[ext_resource type="Texture2D" uid="uid://brd4e00wnv2hw" path="res://assets/Art/enemy/barrel/barrel_bullet.png" id="2_5f7u3"]
+[ext_resource type="Script" uid="uid://bj3stuiih12nn" path="res://scripts/hit_area_2d.gd" id="3_mkrp2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5f7u3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkrp2"]
+size = Vector2(5, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7x4x"]
 size = Vector2(5, 6)
 
 [node name="Barrel_bullet" type="CharacterBody2D" unique_id=2123587029]
-collision_layer = 12
+collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_5f7u3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=53676549]
-position = Vector2(0.5, 1)
-shape = SubResource("RectangleShape2D_5f7u3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2069271679]
 texture = ExtResource("2_5f7u3")
 
-[node name="FrontCast2D" type="RayCast2D" parent="." unique_id=1520954476]
-target_position = Vector2(2.8, 0)
-collision_mask = 3
+[node name="HitArea2D" type="Area2D" parent="." unique_id=758241582]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("3_mkrp2")
+metadata/_custom_type_script = "uid://bj3stuiih12nn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea2D" unique_id=202651331]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_mkrp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=22127400]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_e7x4x")
+
+[connection signal="body_entered" from="HitArea2D" to="." method="_on_hit_area_2d_hitted"]
+[connection signal="hitted" from="HitArea2D" to="." method="_on_hit_area_2d_hitted"]

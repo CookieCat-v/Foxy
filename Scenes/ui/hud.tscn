@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://hudsceneuid"]
+
+[ext_resource type="Script" uid="uid://cej6u08jdlbqk" path="res://Scripts/ui/hud.gd" id="1_kpdpg"]
+[ext_resource type="Theme" uid="uid://dwprtnpmwr772" path="res://Scenes/ui/pixel_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" uid="uid://g6knpxl51v8a" path="res://Assets/items/coin.png" id="3_coin"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1596815740]
+script = ExtResource("1_kpdpg")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=755417089]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=227226824]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 48
+
+[node name="HealthSection" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=376881151]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HealthSection" unique_id=1578158863]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "HEALTH"
+uppercase = true
+
+[node name="HealthContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/HealthSection" unique_id=2066149431]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="CoinSection" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1122223714]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/CoinSection" unique_id=1045403654]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "COINS"
+uppercase = true
+
+[node name="CoinRow" type="HBoxContainer" parent="MarginContainer/HBoxContainer/CoinSection" unique_id=1291199735]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CoinIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/CoinSection/CoinRow" unique_id=691692849]
+texture_filter = 1
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("3_coin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CoinLabel" type="Label" parent="MarginContainer/HBoxContainer/CoinSection/CoinRow" unique_id=1534744624]
+texture_filter = 1
+layout_mode = 2
+text = "0"
+vertical_alignment = 1
