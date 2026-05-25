@@ -12,6 +12,7 @@ var pause_menu_scene = preload("res://Scenes/ui/pause_menu.tscn")
 var pause_menu_instance = null
 
 func _ready() -> void:
+	$Direction/HitArea2D.hide()
 	super._ready()
 	fsm = FSM.new(self, $States, $States/Idle)
 	if has_blade:
