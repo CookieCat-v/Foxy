@@ -17,13 +17,8 @@ func _change_state(newStatePath: String) -> void:
 	currentState = newState
 	currentState._enter(self)
 
-#func addScore() -> void:
-	#if label:
-		#var currentScore = int(label.text)
-		#currentScore += 1000
-		#label.text = str(currentScore)
-
 func _on_body_entered(body: Node2D) -> void:
-	if body is Player:
-		#label = body.get_parent().get_node("CanvasLayer").get_node("ScoreLabel")
+	if body is Player and body.has_method("add_coin") and body.chest_key_amount > 0:
 		currentState._handle_input("open_chest")
+		body.chest_key_amount -= 1
+		body.add_coin(100)
