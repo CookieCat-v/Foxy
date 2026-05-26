@@ -6,6 +6,7 @@ extends FSMState
 func control_moving() -> bool:
 	var dir: float = Input.get_action_strength("right") - Input.get_action_strength("left")
 	var is_moving: bool = abs(dir) > 0.1
+	#print_debug(is_moving)
 	if is_moving:
 		dir = sign(dir)
 		obj.change_direction(dir)
@@ -16,6 +17,7 @@ func control_moving() -> bool:
 	else:
 		obj.velocity.x = 0
 	return false
+	
 
 #Control jumping
 #Return true if jumping
@@ -26,7 +28,18 @@ func control_jump() -> bool:
 		change_state(fsm.states.jump)
 		return true
 	return false
-
+var dash_cd = 0
+func control_dash(delta: float) ->bool:
+	if (dash_cd>0):
+		dash_cd-=delta
+	if Input.is_action_just_pressed("dash") and dash_cd <=0:
+		change_state(fsm.states.dash)
+		dash_cd = 1.0
+		
+		
+		return true
+	return false
+		
 func take_damage(damage) -> void:
 	#Player take damage
 	obj.health -= damage
