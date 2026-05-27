@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cej6u08jdlbqk" path="res://Scripts/ui/hud.gd" id="1_kpdpg"]
 [ext_resource type="Theme" uid="uid://dwprtnpmwr772" path="res://Scenes/ui/pixel_theme.tres" id="2_theme"]
 [ext_resource type="Texture2D" uid="uid://g6knpxl51v8a" path="res://Assets/items/coin.png" id="3_coin"]
+[ext_resource type="Texture2D" uid="uid://c60d4w2osw5av" path="res://Assets/ui/health.png" id="4_health"]
+[ext_resource type="Texture2D" uid="uid://c3a4l2h12gs76" path="res://Assets/ui/health_bar.png" id="5_health_bar"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1596815740]
 script = ExtResource("1_kpdpg")
@@ -35,9 +37,11 @@ theme_override_font_sizes/font_size = 12
 text = "HEALTH"
 uppercase = true
 
-[node name="HealthContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/HealthSection" unique_id=2066149431]
+[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/HealthSection" unique_id=2066149431]
 layout_mode = 2
-theme_override_constants/separation = 4
+texture_under = ExtResource("5_health_bar")
+texture_progress = ExtResource("4_health")
+texture_progress_offset = Vector2(18, 14)
 
 [node name="CoinSection" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1122223714]
 layout_mode = 2

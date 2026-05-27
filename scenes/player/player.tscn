@@ -129,7 +129,7 @@ size = Vector2(28, 35.5)
 [node name="Player" type="CharacterBody2D" unique_id=1495051546]
 collision_layer = 2
 script = ExtResource("1_wodsf")
-max_health = 1
+max_health = 3
 metadata/_custom_type_script = "uid://w7xdmsdvf5vd"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1994915027]

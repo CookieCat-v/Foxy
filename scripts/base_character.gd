@@ -26,6 +26,7 @@ var _next_direction: int = 1
 var _next_animated_sprite: AnimatedSprite2D = null
 
 func _ready() -> void:
+	health = max_health
 	set_animated_sprite($Direction/AnimatedSprite2D)
 
 func _physics_process(delta: float) -> void:
