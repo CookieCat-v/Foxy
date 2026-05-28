@@ -6,9 +6,16 @@ func _enter() -> void:
 	pass
 
 func _update(_delta: float) -> void:
+	
 	#Control moving
 	var is_moving: bool = control_moving()
+	control_dash(_delta)
+	#if obj.is_on_wall():
+		#control_jump()
 	#If on floor change to idle if not moving and not jumping
 	if obj.is_on_floor() and not is_moving:
 		change_state(fsm.states.idle)
+		
+#	if obj.is_on_wall_only():
+#		change_state(fsm.states.wallclimb)
 	pass

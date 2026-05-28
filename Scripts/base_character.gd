@@ -26,6 +26,7 @@ var _next_direction: int = 1
 var _next_animated_sprite: AnimatedSprite2D = null
 
 func _ready() -> void:
+	health = max_health
 	set_animated_sprite($Direction/AnimatedSprite2D)
 
 func _physics_process(delta: float) -> void:
@@ -64,7 +65,11 @@ func turn_right() -> void:
 
 func jump() -> void:
 	velocity.y = -jump_speed
-
+func dash() -> void:
+	if velocity.x == 0:
+		velocity.x = (500+movement_speed) * direction 
+	else:
+		velocity.x +=  500 * direction
 func stop_move() -> void:
 	velocity.x = 0
 	velocity.y = 0

@@ -27,8 +27,11 @@ func _ready() -> void:
 	get_parent().call_deferred("add_child", hud_instance)
 	health_changed.connect(hud_instance.update_health)
 	coins_changed.connect(hud_instance.update_coins)
-	hud_instance.update_health(health, max_health)
-	hud_instance.update_coins(coins)
+	
+	hud_instance.ready.connect(func():
+		hud_instance.update_health(health, max_health)
+		hud_instance.update_coins(coins)
+	)
 	
 	pause_menu_instance = pause_menu_scene.instantiate()
 	get_parent().call_deferred("add_child", pause_menu_instance)
