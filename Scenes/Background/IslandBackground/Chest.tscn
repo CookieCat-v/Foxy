@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://b6xf8m2v316en"]
 
 [ext_resource type="Script" uid="uid://bugh7b5stfg56" path="res://Scripts/BackgroundControlScript/Chest.gd" id="1_v7fit"]
-[ext_resource type="Texture2D" uid="uid://typ8dtg6b2o4" path="res://Assets/Art/island/objects/chest/chest_gold_close_03.png" id="2_8oqpc"]
-[ext_resource type="Texture2D" uid="uid://duwk5x5pje1x" path="res://Assets/Art/island/objects/chest/chest_gold_close_04.png" id="3_x2teu"]
-[ext_resource type="Texture2D" uid="uid://c1oe2ajw3hwdp" path="res://Assets/Art/island/objects/chest/chest_gold_open_01.png" id="4_6l4ui"]
-[ext_resource type="Texture2D" uid="uid://cc8424juwfrr0" path="res://Assets/Art/island/objects/chest/chest_gold_open_02.png" id="5_hj0t0"]
-[ext_resource type="Texture2D" uid="uid://db1k53jjooxc0" path="res://Assets/Art/island/objects/chest/chest_gold_open_03.png" id="6_man5n"]
-[ext_resource type="Texture2D" uid="uid://c4m2ji6v3v1sj" path="res://Assets/Art/island/objects/chest/chest_gold_open_04.png" id="7_kwdp5"]
-[ext_resource type="Texture2D" uid="uid://rklpp03vtdqy" path="res://Assets/Art/island/objects/chest/chest_gold_open_05.png" id="8_2kswo"]
+[ext_resource type="Texture2D" uid="uid://typ8dtg6b2o4" path="res://Assets/items/chest/chest_gold_close_03.png" id="2_8oqpc"]
+[ext_resource type="Texture2D" uid="uid://duwk5x5pje1x" path="res://Assets/items/chest/chest_gold_close_04.png" id="3_x2teu"]
+[ext_resource type="Texture2D" uid="uid://c1oe2ajw3hwdp" path="res://Assets/items/chest/chest_gold_open_01.png" id="4_6l4ui"]
+[ext_resource type="Texture2D" uid="uid://cc8424juwfrr0" path="res://Assets/items/chest/chest_gold_open_02.png" id="5_hj0t0"]
+[ext_resource type="Texture2D" uid="uid://db1k53jjooxc0" path="res://Assets/items/chest/chest_gold_open_03.png" id="6_man5n"]
+[ext_resource type="Texture2D" uid="uid://c4m2ji6v3v1sj" path="res://Assets/items/chest/chest_gold_open_04.png" id="7_kwdp5"]
+[ext_resource type="Texture2D" uid="uid://rklpp03vtdqy" path="res://Assets/items/chest/chest_gold_open_05.png" id="8_2kswo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xpia1"]
 animations = [{
@@ -43,7 +43,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_2kswo")
 }],
-"loop": true,
+"loop": false,
 "name": &"open",
 "speed": 5.0
 }]
@@ -86,7 +86,6 @@ func _handle_input(event: String):
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if chest.anim.animation == \"open\":
-		chest.addScore()
 		chest.queue_free()
 "
 
