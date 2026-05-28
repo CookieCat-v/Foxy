@@ -65,7 +65,11 @@ func turn_right() -> void:
 
 func jump() -> void:
 	velocity.y = -jump_speed
-
+func dash() -> void:
+	if velocity.x == 0:
+		velocity.x = (500+movement_speed) * direction 
+	else:
+		velocity.x +=  500 * direction
 func stop_move() -> void:
 	velocity.x = 0
 	velocity.y = 0
