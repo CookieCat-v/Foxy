@@ -23,14 +23,14 @@ func control_moving() -> bool:
 #Return true if jumping
 func control_jump() -> bool:
 	#If jump is pressed change to jump state and return true
-	if Input.is_action_just_pressed("jump") and not obj.is_on_wall():
+	if Input.is_action_just_pressed("jump"):
 		change_state(fsm.states.jump)
 		obj.jump()
 		return true
-	elif Input.is_action_just_pressed("jump") and obj.is_on_wall():
-		change_state(fsm.states.wallclimb)
-		obj.jump()
-		return true
+	#elif Input.is_action_just_pressed("jump") and obj.is_on_wall():
+		#change_state(fsm.states.wallclimb)
+		#obj.jump()
+		#return true
 	return false
 var dash_cd = 0
 var air_dash: bool = true

@@ -42,8 +42,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _update_movement(delta: float) -> void:
-	if not is_on_wall():
-		velocity.y += gravity * delta
+	velocity.y += gravity * delta
 	move_and_slide()
 	pass
 
