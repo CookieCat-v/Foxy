@@ -43,7 +43,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_2kswo")
 }],
-"loop": true,
+"loop": false,
 "name": &"open",
 "speed": 5.0
 }]
@@ -86,8 +86,7 @@ func _handle_input(event: String):
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if chest.anim.animation == \"open\":
-		chest.addScore()
-		chest.queue_free()
+		chest.get_tree().change_scene_to_file(\"res://Scenes/ui/victory_scene.tscn\")
 "
 
 [node name="Chest" type="Area2D" unique_id=1290145814]
