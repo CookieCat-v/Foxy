@@ -142,10 +142,18 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="CloseBtn" type="TextureButton" parent="PopupBackground/VBoxContainer" unique_id=1934643426]
+[node name="CloseBtn" type="TextureButton" parent="PopupBackground"]
 texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 10
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 0
 texture_normal = ExtResource("3_close")
-stretch_mode = 3
+ignore_texture_size = true
+stretch_mode = 5

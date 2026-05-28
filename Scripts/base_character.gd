@@ -26,6 +26,7 @@ var _next_direction: int = 1
 var _next_animated_sprite: AnimatedSprite2D = null
 
 func _ready() -> void:
+	health = max_health
 	set_animated_sprite($Direction/AnimatedSprite2D)
 
 func _physics_process(delta: float) -> void:
@@ -43,8 +44,6 @@ func _physics_process(delta: float) -> void:
 func _update_movement(delta: float) -> void:
 	if not is_on_wall():
 		velocity.y += gravity * delta
-	else:
-		velocity.y = 0
 	move_and_slide()
 	pass
 
@@ -66,8 +65,6 @@ func turn_right() -> void:
 	_next_direction = 1
 
 func jump() -> void:
-	if is_on_wall():
-		velocity.x += get_wall_normal().x * 100
 	velocity.y = -jump_speed
 func dash() -> void:
 	if velocity.x == 0:

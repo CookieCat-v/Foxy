@@ -1,33 +1,18 @@
 extends CanvasLayer
 class_name HUD
 
-@onready var health_container = $MarginContainer/HBoxContainer/HealthSection/HealthContainer
+@onready var health_bar = $MarginContainer/HBoxContainer/HealthSection/HealthBar
 @onready var coin_label = $MarginContainer/HBoxContainer/CoinSection/CoinRow/CoinLabel
-
-var heart_icon = preload("res://Assets/items/ruby.png")
 
 func _ready() -> void:
 	pass
 
 func update_health(current_health: int, max_health: int) -> void:
-	if not health_container:
+	if not health_bar:
 		return
 		
-	for child in health_container.get_children():
-		child.queue_free()
-		
-	for i in range(max_health):
-		var heart = TextureRect.new()
-		heart.texture = heart_icon
-		heart.custom_minimum_size = Vector2(24, 24)
-		heart.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		heart.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		heart.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-		
-		if i >= current_health:
-			heart.modulate = Color(0.2, 0.2, 0.2, 0.5) 
-		
-		health_container.add_child(heart)
+	health_bar.max_value = max_health
+	health_bar.value = current_health
 
 func update_coins(amount: int) -> void:
 	if coin_label:

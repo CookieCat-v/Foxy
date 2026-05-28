@@ -14,7 +14,7 @@ func control_moving() -> bool:
 		if obj.is_on_floor():
 			change_state(fsm.states.run)
 		return true
-	else:
+	else:	
 			obj.velocity.x = 0
 	return false
 	
@@ -35,8 +35,7 @@ func control_jump() -> bool:
 var dash_cd = 0
 var air_dash: bool = true
 func control_dash(delta: float) ->bool:
-	
-	if (dash_cd>0):
+	if (dash_cd>=0):
 		dash_cd-=delta
 	if Input.is_action_just_pressed("dash") and dash_cd <=0 and obj.is_on_floor():
 		dash_cd = 1.0
@@ -44,20 +43,21 @@ func control_dash(delta: float) ->bool:
 		obj.dash()
 		return true
 	elif Input.is_action_just_pressed("dash") and air_dash and not obj.is_on_floor():
-		print_debug(air_dash)
 		air_dash = false
 		change_state(fsm.states.dash)
 		obj.dash()
 		return true
+	if obj.is_on_floor():
+		air_dash = true
 	return false
-
+		
 func take_damage(damage) -> void:
 	#Player take damage
-	obj.health -= damage
+	obj.take_damage(damage)
 	if obj.health <= 0:
 		change_state(fsm.states.dead)
-	#Player die if health is 0 and change to dead state
-	#Player hurt if health is not 0 and change to hurt state
+	else:
+		change_state(fsm.states.hurt)
 	return
 
 func control_attack() -> bool:

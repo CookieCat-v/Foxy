@@ -1,21 +1,35 @@
 extends PlayerState
 
+const WALL_SLIDE_SPEED = 20.0
+const WALL_JUMP_X = 350.0
+const WALL_JUMP_Y = -450.0
 
-# Called when the node enters the scene tree for the first time.
 func _enter() -> void:
 	obj.change_animation("jump")
-	#AudioManager.play_sound("player_jump")
-	obj.velocity.y -= 320
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _update(delta: float) -> void:
-	
-	if obj.velocity.y > 0:
-		change_state(fsm.states.fall)
-	if not obj.is_on_wall() or abs(obj.velocity.x) <= 99:
+
+	# Giảm tốc độ rơi khi bám tường
+	if obj.velocity.y > WALL_SLIDE_SPEED:
+		obj.velocity.y = WALL_SLIDE_SPEED
+
+	# Nhảy khỏi tường
+	if Input.is_action_just_pressed("jump"):
+
+		var wall_normal = obj.get_wall_normal()
+
+		obj.velocity.x = wall_normal.x * WALL_JUMP_X
+		obj.velocity.y = WALL_JUMP_Y
+
 		change_state(fsm.states.jump)
+		return
+
+	# Không còn chạm tường
+	if not obj.is_on_wall():
+		change_state(fsm.states.fall)
+		return
+
+	# Chạm đất
 	if obj.is_on_floor():
 		change_state(fsm.states.idle)
-	pass
+		return

@@ -11,9 +11,9 @@ func _enter() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _update(delta: float) -> void:
-	
-	#if Input.is_action_just_pressed("jump"):
-		#air_dash = true
+	if obj.is_on_floor():
+		control_jump()
+
 	if (time  <= 0):
 		if (fsm.current_state==fsm.states.dash):
 			change_state(fsm.states.fall)

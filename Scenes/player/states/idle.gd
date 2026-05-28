@@ -8,11 +8,10 @@ func _enter() -> void:
 
 func _update(delta: float) -> void:
 	#Control jump
-
+	control_jump()
+	#Control moving
 	control_moving()
 	control_dash(delta)
-	#Control moving
-	control_jump()
 	control_attack()
 	#coyote time
 	if obj.is_on_floor():

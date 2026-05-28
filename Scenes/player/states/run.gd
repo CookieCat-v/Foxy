@@ -6,15 +6,13 @@ func _enter() -> void:
 	pass
 
 func _update(delta: float):
-	if not control_moving():
-		change_state(fsm.states.idle)
-
-	#Control moving and if not moving change to idle
-	
-	control_dash(delta)
-		#Control jump
+	#Control jump
 	if control_jump():
 		return
+	#Control moving and if not moving change to idle
+	if not control_moving():
+		change_state(fsm.states.idle)
+	control_dash(delta)
 	#If not on floor change to fall
 	if obj.is_on_floor():
 		timer = delta + 0.25
