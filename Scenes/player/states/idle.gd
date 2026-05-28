@@ -15,7 +15,7 @@ func _update(delta: float) -> void:
 	control_attack()
 	#coyote time
 	if obj.is_on_floor():
-		timer = delta + 0.1
+		timer = delta + 0.25
 	#If not on floor change to fall
 	if not obj.is_on_floor():
 		#true khi het coyote time

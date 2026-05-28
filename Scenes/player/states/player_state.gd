@@ -15,7 +15,7 @@ func control_moving() -> bool:
 			change_state(fsm.states.run)
 		return true
 	else:
-		obj.velocity.x = 0
+			obj.velocity.x = 0
 	return false
 	
 
@@ -23,21 +23,32 @@ func control_moving() -> bool:
 #Return true if jumping
 func control_jump() -> bool:
 	#If jump is pressed change to jump state and return true
-	if Input.is_action_just_pressed("jump"):
-		obj.jump()
+	if Input.is_action_just_pressed("jump") and not obj.is_on_wall():
 		change_state(fsm.states.jump)
+		obj.jump()
+		return true
+	elif Input.is_action_just_pressed("jump") and obj.is_on_wall():
+		change_state(fsm.states.wallclimb)
+		obj.jump()
 		return true
 	return false
 var dash_cd = 0
+var air_dash: bool = true
 func control_dash(delta: float) ->bool:
-	if (dash_cd>0):
+	if (dash_cd>0 and air_dash):
 		dash_cd-=delta
-	if Input.is_action_just_pressed("dash") and dash_cd <=0:
-		change_state(fsm.states.dash)
+	if Input.is_action_just_pressed("dash") and dash_cd <=0 and obj.is_on_floor():
 		dash_cd = 1.0
-		
-		
+		change_state(fsm.states.dash)
+		obj.dash()
 		return true
+	elif Input.is_action_just_pressed("dash") and air_dash and not obj.is_on_floor():
+		air_dash = false
+		change_state(fsm.states.dash)
+		obj.dash()
+		return true
+	if obj.is_on_floor():
+		air_dash = true
 	return false
 		
 func take_damage(damage) -> void:

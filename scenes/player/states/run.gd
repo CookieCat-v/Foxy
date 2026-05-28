@@ -15,7 +15,7 @@ func _update(delta: float):
 	control_dash(delta)
 	#If not on floor change to fall
 	if obj.is_on_floor():
-		timer = delta + 0.1
+		timer = delta + 0.25
 	#If not on floor change to fall
 	if not obj.is_on_floor():
 		if update_timer(delta):

@@ -41,7 +41,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _update_movement(delta: float) -> void:
-	velocity.y += gravity * delta
+	if not is_on_wall():
+		velocity.y += gravity * delta
+	else:
+		velocity.y = 0
 	move_and_slide()
 	pass
 
@@ -63,7 +66,14 @@ func turn_right() -> void:
 	_next_direction = 1
 
 func jump() -> void:
+	if is_on_wall():
+		velocity.x += get_wall_normal().x * 100
 	velocity.y = -jump_speed
+func dash() -> void:
+	if velocity.x == 0:
+		velocity.x = (500+movement_speed) * direction 
+	else:
+		velocity.x +=  500 * direction
 func stop_move() -> void:
 	velocity.x = 0
 	velocity.y = 0
