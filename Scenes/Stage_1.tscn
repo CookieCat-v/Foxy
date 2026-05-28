@@ -113,7 +113,7 @@ tile_map_data = PackedByteArray("AAAAAAcAAAABAAAAAAABAAcAAAABAAQAAAACAAcAAAABAAQ
 tile_set = ExtResource("1_vi3up")
 
 [node name="Player" parent="." unique_id=812582594 instance=ExtResource("9_lascg")]
-position = Vector2(8078, 90)
+position = Vector2(8155, 56)
 
 [node name="Enemies" type="Node2D" parent="." unique_id=295123462]
 
