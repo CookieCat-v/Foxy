@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cojjwfmfc8e5q"]
 
-[ext_resource type="Texture2D" uid="uid://3618lytb7nnv" path="res://Assets/monsters/mushroom/mushroom_01.png" id="1_hloew"]
-[ext_resource type="Script" uid="uid://dhwpxb8jlldcl" path="res://Scenes/Enemies/Mushroom/Mushroom.gd" id="1_rdydv"]
-[ext_resource type="Texture2D" uid="uid://bqgmklofxv0qi" path="res://Assets/monsters/mushroom/mushroom_02.png" id="2_j26pb"]
-[ext_resource type="Texture2D" uid="uid://cghgcxg1pvwd6" path="res://Assets/monsters/mushroom/mushroom_03.png" id="3_305jp"]
-[ext_resource type="Script" uid="uid://bj3stuiih12nn" path="res://Scripts/hit_area_2d.gd" id="5_tu052"]
-[ext_resource type="Script" uid="uid://csu2b21cwchqw" path="res://Scripts/hurt_area_2d.gd" id="6_p0scm"]
+[ext_resource type="Texture2D" uid="uid://3618lytb7nnv" path="res://assets/monsters/mushroom/mushroom_01.png" id="1_hloew"]
+[ext_resource type="Script" uid="uid://dhwpxb8jlldcl" path="res://scenes/Enemies/Mushroom/Mushroom.gd" id="1_rdydv"]
+[ext_resource type="Texture2D" uid="uid://bqgmklofxv0qi" path="res://assets/monsters/mushroom/mushroom_02.png" id="2_j26pb"]
+[ext_resource type="Texture2D" uid="uid://cghgcxg1pvwd6" path="res://assets/monsters/mushroom/mushroom_03.png" id="3_305jp"]
+[ext_resource type="Script" uid="uid://bj3stuiih12nn" path="res://scripts/hit_area_2d.gd" id="5_tu052"]
+[ext_resource type="Script" uid="uid://csu2b21cwchqw" path="res://scripts/hurt_area_2d.gd" id="6_p0scm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o1ms0"]
 size = Vector2(18, 22)

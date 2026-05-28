@@ -89,10 +89,8 @@ layout_mode = 2
 texture_normal = ExtResource("3_btn_settings")
 stretch_mode = 3
 
-[node name="QuitBtn" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(30, 32)
+[node name="QuitBtn" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1140623971]
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("4_btn_quit")
-ignore_texture_size = true
-stretch_mode = 5
+stretch_mode = 3

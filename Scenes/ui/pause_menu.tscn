@@ -167,12 +167,10 @@ alignment = 1
 theme_override_constants/separation = 24
 
 [node name="MenuBtn" type="TextureButton" parent="Control/PopupBackground/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(40, 40)
 texture_filter = 1
 layout_mode = 2
 texture_normal = ExtResource("6_menu")
-ignore_texture_size = true
-stretch_mode = 5
+stretch_mode = 3
 
 [node name="RestartBtn" type="TextureButton" parent="Control/PopupBackground/VBoxContainer/HBoxContainer"]
 texture_filter = 1

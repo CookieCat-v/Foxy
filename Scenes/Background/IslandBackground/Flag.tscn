@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://5cx6cxqa63pu" path="res://Assets/Art/foxy/foxy/flag/flag_3.png" id="4_yfgrl"]
 [ext_resource type="Texture2D" uid="uid://dlb0lvuhgx7fy" path="res://Assets/Art/foxy/foxy/flag/flag_4.png" id="5_xbenm"]
 [ext_resource type="Texture2D" uid="uid://ca02ijo38ogkf" path="res://Assets/Art/foxy/foxy/flag/flag_5.png" id="6_4g12a"]
-[ext_resource type="Texture2D" uid="uid://c4rqp2pt34uek" path="res://Assets/Art/island/objects/flag/platform.png" id="7_a7wgq"]
 
 [sub_resource type="GDScript" id="GDScript_jko8g"]
 script/source = "extends Area2D
@@ -57,7 +56,3 @@ texture = ExtResource("1_jko8g")
 position = Vector2(19, -24.999998)
 scale = Vector2(1.1860058, 1.1860058)
 sprite_frames = SubResource("SpriteFrames_yb5uc")
-
-[node name="FlatPlatform" type="Sprite2D" parent="." unique_id=1135717877]
-position = Vector2(0, 45)
-texture = ExtResource("7_a7wgq")

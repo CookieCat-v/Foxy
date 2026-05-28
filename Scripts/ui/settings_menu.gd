@@ -4,7 +4,7 @@ class_name SettingsMenu
 @onready var master_slider = $PopupBackground/VBoxContainer/MasterRow/MasterSlider
 @onready var bgm_slider = $PopupBackground/VBoxContainer/BGMRow/BGMSlider
 @onready var sfx_slider = $PopupBackground/VBoxContainer/SFXRow/SFXSlider
-@onready var close_btn = $PopupBackground/CloseBtn
+@onready var close_btn = $PopupBackground/VBoxContainer/CloseBtn
 
 var master_bus_idx = "Master"
 var bgm_bus_idx = "Music"
@@ -23,7 +23,6 @@ func _ready() -> void:
 	_add_hover_effect(close_btn)
 
 func _add_hover_effect(btn: Control) -> void:
-	btn.pivot_offset = btn.size / 2
 	btn.mouse_entered.connect(func(): 
 		var tween = create_tween()
 		tween.tween_property(btn, "scale", Vector2(1.1, 1.1), 0.1)
