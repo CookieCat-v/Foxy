@@ -16,6 +16,6 @@ func _update(_delta: float) -> void:
 	if obj.is_on_floor() and not is_moving:
 		change_state(fsm.states.idle)
 		
-	if obj.is_on_wall_only():
-		change_state(fsm.states.wallclimb)
+#	if obj.is_on_wall_only():
+#		change_state(fsm.states.wallclimb)
 	pass

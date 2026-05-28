@@ -47,8 +47,8 @@ func control_dash(delta: float) ->bool:
 		change_state(fsm.states.dash)
 		obj.dash()
 		return true
-	if obj.is_on_floor():
-		air_dash = true
+#	if obj.is_on_floor():
+#		air_dash = true
 	return false
 		
 func take_damage(damage) -> void:
